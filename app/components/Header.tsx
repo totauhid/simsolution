@@ -6,16 +6,18 @@ import { navLinks } from "../lib";
 import { usePathname } from "next/navigation";
 import Container from "./ui/Container";
 import { useEffect, useState } from "react";
+import { useStickyStore } from "@/lib/state";
 
 const Header = () => {
-  const [stickyActive, setStickyActive] = useState<boolean>(false);
-
   const pathname = usePathname();
+  const { stickyActive, setStickyActive } = useStickyStore();
 
   useEffect(() => {
-    window.addEventListener("scroll", () => {
-      const header = document.querySelector("header");
+    setStickyActive(false);
+    const header = document.querySelector("header");
+    header?.classList.remove("sticky-active");
 
+    window.addEventListener("scroll", () => {
       if (window.scrollY > 50) {
         header?.classList.add("sticky-active");
         setStickyActive(true);
@@ -24,7 +26,7 @@ const Header = () => {
         setStickyActive(false);
       }
     });
-  }, [stickyActive]);
+  }, [pathname]);
 
   return (
     <header className="fixed top-0 z-[1000] w-full">
