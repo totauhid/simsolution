@@ -1,9 +1,9 @@
+import PowerFullValues from "@/app/components/sections/PowerFullValues";
 import SubHero from "@/app/components/sections/SubHero";
 import TransformIdea from "@/app/components/sections/TransformIdea";
 import WhyWorkWithUs from "@/app/components/sections/WhyWorkWithUs";
 import Container from "@/app/components/ui/Container";
 import { NextPage } from "next";
-import Image from "next/image";
 
 interface Props {}
 
@@ -33,6 +33,7 @@ const Page: NextPage<Props> = ({}) => {
 
       <TransformIdea />
       <WhyWorkWithUs />
+      <PowerFullValues />
     </>
   );
 };
