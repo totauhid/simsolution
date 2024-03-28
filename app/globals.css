@@ -1,0 +1,188 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Syne:wght@400;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Satisfy&family=Syne:wght@400;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: "Syne", arial;
+  font-optical-sizing: auto;
+}
+
+@layer components {
+  nav ul li.new::after {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    top: 0;
+    right: 0;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    border: 2px solid #f57c00;
+  }
+
+  .active,
+  .highlight,
+  nav ul li a:hover {
+    color: #f57c00 !important;
+    @apply transition-colors;
+  }
+
+  .sticky-active {
+    background-color: #fff;
+    transition: 500ms ease-in-out;
+    box-shadow: 0 0 40px 0 rgba(18, 24, 32, 0.1);
+  }
+
+  .sticky-active nav ul li a {
+    color: black;
+  }
+
+  .font-satisfied {
+    font-family: "Satisfy", cursive;
+    font-weight: 800;
+    font-style: normal;
+  }
+
+  .lets-talk-btn {
+    @apply text-white py-[22.5px] px-[60px] rounded-full border-2  border-[#f57c00];
+  }
+
+  .lets-talk-btn:hover {
+    box-shadow: inset 0 0 0 1px #f57c00;
+  }
+
+  .divider {
+    display: inline-block;
+    width: 100%;
+    height: 2px;
+    background-color: rgba(18, 24, 32, 0.1);
+  }
+
+  .divider::before {
+    content: "";
+    width: 25px;
+    border-right: 5px solid #fff;
+    height: 100%;
+    background-color: #f57c00;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .card::after {
+    content: "";
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+    position: absolute;
+    bottom: -8px;
+    left: calc(50% - 15px);
+    transform: rotate(45deg);
+    border-radius: 0 0 5px 0;
+  }
+
+  /* brand section */
+  .brand-circle::after {
+    content: "";
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    transform: translateY(-5px) scale(0);
+    border-radius: 50%;
+    z-index: -1;
+    transition: 600ms ease;
+    background-color: gray;
+  }
+
+  .brand-circle:hover::after {
+    transform: translateY(-4px) scale(1);
+    background-color: #f57c00;
+  }
+
+  /* section divider */
+  .section-divider::before {
+    content: "";
+    display: inline-block;
+    width: 25px;
+    border-right: 5px solid #fff;
+    height: 100%;
+    background-color: #f57c00;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .section-divider::after {
+    content: "";
+    display: inline-block;
+    width: 25px;
+    left: auto;
+    top: 0;
+    right: 0;
+    height: 100%;
+    background-color: #f57c00;
+    position: absolute;
+    border-right: none;
+    border-left: 5px solid #fff;
+  }
+
+  .section-divider-single::before {
+    content: "";
+    display: inline-block;
+    width: 25px;
+    border-right: 5px solid #fff;
+    height: 100%;
+    background-color: #f57c00;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  /* help section */
+  .help-circle::after {
+    content: "";
+    display: inline-block;
+    background-color: #f57c00;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -2px;
+    right: -3px;
+    width: 20px;
+    height: 20px;
+    z-index: -1;
+  }
+}
+
+@layer base {
+}
+
+@layer utilities {
+  .text-primary {
+    color: #f57c00;
+  }
+
+  .bg-primary {
+    background-color: #f57c00;
+  }
+}
+
+/* overwrite css code */
+.slick-dots {
+  position: absolute !important;
+  bottom: 50px !important;
+}
+
+.slick-dots li button:before {
+  font-size: 8px !important;
+  color: white !important;
+}
