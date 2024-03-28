@@ -161,6 +161,21 @@
     height: 20px;
     z-index: -1;
   }
+
+  /* service section */
+  .sass-card::after {
+    content: "";
+    display: inline-block;
+    border-radius: 50%;
+    background-color: #f57c00;
+    width: 18px;
+    height: 18px;
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(39px, 37px);
+  }
 }
 
 @layer base {
