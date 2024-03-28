@@ -1,6 +1,6 @@
 import React from "react";
 import Container from "../ui/Container";
-import Service from "../ui/Service";
+import Service from "../ui/ServiceCard";
 
 import icon1 from "@/public/images/help-icon/1.svg";
 import icon2 from "@/public/images/help-icon/2.svg";

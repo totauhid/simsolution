@@ -1,18 +1,31 @@
 import { NextPage } from "next";
-import { IconType } from "react-icons";
+import Divider from "./Divider";
+import Image from "next/image";
+import SingleDivider from "./SingleDivider";
 
 interface Props {
+  img: string;
+  serial: string;
   title: string;
   description: string;
-  Icon: IconType;
 }
 
-const ServiceCard: NextPage<Props> = ({ title, description, Icon }) => {
+const ServiceCard: NextPage<Props> = ({ img, serial, title, description }) => {
   return (
-    <div className="shadow-lg p-5 rounded-md flex flex-col items-center m-5">
-      <Icon size={50} className="text-brand" />
-      <h4 className="my-4 text-xl">{title}</h4>
-      <p className="text-center">{description}</p>
+    <div>
+      <SingleDivider />
+      <div className="flex gap-20 py-[30px]">
+        <div className="relative help-circle h-[45px] w-[45px] shrink-0 ml-[30px] z-10">
+          <Image src={img} fill alt="icon" />
+        </div>
+        <div>
+          <div className="flex items-center gap-4 text-[18px] mt-[10px] mb-[30px]">
+            <span className="highlight">{serial}</span>
+            <h5>{title}</h5>
+          </div>
+          <p className="text-[#12182066]">{description}</p>
+        </div>
+      </div>
     </div>
   );
 };
