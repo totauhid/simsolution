@@ -164,6 +164,14 @@
 }
 
 @layer base {
+  p,
+  h2,
+  h3,
+  h4,
+  h5,
+  span {
+    color: #121820;
+  }
 }
 
 @layer utilities {

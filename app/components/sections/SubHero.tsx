@@ -16,7 +16,7 @@ interface Props {
   history: string;
 }
 
-const SubHero: NextPage<Props> = ({}) => {
+const SubHero: NextPage<Props> = ({ title, history }) => {
   const { stickyActive, setStickyActive } = useStickyStore();
 
   useEffect(() => {
@@ -26,16 +26,20 @@ const SubHero: NextPage<Props> = ({}) => {
   }, [stickyActive]);
 
   return (
-    <div className="relative h-[550px] w-full">
-      <div className="bg-[#F3F3F4] h-[550px]">
+    <div className=" h-[550px] w-full">
+      <div className="bg-[#F3F3F4] h-[550px] relative">
         <Container>
           <Image
             className="invert opacity-[0.05] absolute top-0 left-0 w-full h-full z-[3]"
             src={map}
             alt="map"
             fill
+            style={{
+              objectFit: "cover",
+              objectPosition: "center",
+            }}
           />
-          <div className="pt-52 flex justify-between z-10">
+          <div className="pt-60 flex justify-between z-10">
             <div className="flex flex-col justify-center gap-8">
               <div className="flex items-center gap-4 text-[15px]">
                 <Link
@@ -45,12 +49,10 @@ const SubHero: NextPage<Props> = ({}) => {
                   Home
                 </Link>
                 <span className="h-[7px] w-[7px] bg-primary rounded-full inline-block"></span>
-                <span className="text-[#12182066]">Solutions</span>
+                <span className="text-[#12182066]">{history}</span>
               </div>
 
-              <h3 className="text-[42px] text-[#121820]">
-                SAAS DEVELOPMENT SERVICES
-              </h3>
+              <h3 className="text-[42px]">{title}</h3>
             </div>
 
             <Image

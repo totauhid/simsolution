@@ -61,7 +61,7 @@ export default function SimpleSlider() {
         <Container>
           <div className="text-white flex gap-16">
             <div className="flex flex-col gap-16">
-              <p className="text-[18px]">
+              <p className="text-[18px] text-white">
                 The Next <span className="highlight">Gen</span>
               </p>
 
@@ -89,7 +89,7 @@ export default function SimpleSlider() {
                     <IoMdAdd size={22} />
                     <span className="animate-ping absolute group-hover:inline-flex h-full w-full rounded-full bg-white opacity-40 hidden transition"></span>
                   </div>
-                  <span className="group-hover:text-primary transition-colors shrink-0">
+                  <span className="group-hover:text-primary transition-colors shrink-0 text-white">
                     Dedicated Team
                   </span>
                 </div>
@@ -110,7 +110,7 @@ export default function SimpleSlider() {
                     <IoMdAdd size={22} />
                     <span className="animate-ping absolute group-hover:inline-flex h-full w-full rounded-full bg-white opacity-40 hidden transition"></span>
                   </div>
-                  <span className="group-hover:text-primary transition-colors">
+                  <span className="group-hover:text-primary transition-colors text-white">
                     Developer
                   </span>
                 </div>
@@ -131,7 +131,7 @@ export default function SimpleSlider() {
                     <IoMdAdd size={22} />
                     <span className="animate-ping absolute group-hover:inline-flex h-full w-full rounded-full bg-white opacity-40 hidden transition"></span>
                   </div>
-                  <span className="group-hover:text-primary transition-colors">
+                  <span className="group-hover:text-primary transition-colors text-white">
                     Designers
                   </span>
                 </div>
