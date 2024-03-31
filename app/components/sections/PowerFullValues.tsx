@@ -1,15 +1,13 @@
 import React from "react";
 import Container from "../ui/Container";
 import PowerfullValueCard from "../ui/PowerfullValueCard";
+import SubtitleDot from "../ui/SubtitleDot";
 
 const PowerFullValues = () => {
   return (
     <section className="py-[100px] bg-[#F3F3F4]">
       <Container>
-        <div className="flex items-center gap-[10px] mb-[30px]">
-          <span className="h-[7px] w-[7px] bg-primary rounded-full inline-block"></span>
-          <p>Discover Our Company</p>
-        </div>
+        <SubtitleDot subtitle="Discover Our Company" />
 
         <h3 className="text-[30px] md:text-[35px] lg:text-[42px] mb-[50px] md:mb-[80px] lg:mb-[120px]">
           We Live by <span className="highlight">Powerful</span> Values
