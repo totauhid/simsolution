@@ -14,7 +14,6 @@ import { settings } from "../slider/project-slider/settings";
 
 
 const Projects = () => {
-
   return (
     <section className="py-[100px]">
       <Container>
