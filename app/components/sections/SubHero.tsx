@@ -4,7 +4,7 @@ import { NextPage } from "next";
 import Image from "next/image";
 
 import { useEffect } from "react";
-import { useStickyStore } from "@/lib/state";
+import { useStickyStore } from "@/lib/store";
 import Container from "../ui/Container";
 
 import map from "@/public/images/map.png";

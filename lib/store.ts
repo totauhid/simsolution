@@ -1,11 +1,11 @@
 import { create } from "zustand";
 
-type Store = {
+type StickyType = {
   stickyActive: boolean;
   setStickyActive: (val: boolean) => void;
 };
 
-export const useStickyStore = create<Store>()((set) => ({
+export const useStickyStore = create<StickyType>()((set) => ({
   stickyActive: false,
   setStickyActive: (val) => set(() => ({ stickyActive: val })),
 }));
