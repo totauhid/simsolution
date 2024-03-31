@@ -7,5 +7,5 @@ type StickyType = {
 
 export const useStickyStore = create<StickyType>()((set) => ({
   stickyActive: false,
-  setStickyActive: (val) => set(() => ({ stickyActive: val })),
+  setStickyActive: (val) => set((prevState) => ({ stickyActive: val })),
 }));

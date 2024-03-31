@@ -6,6 +6,7 @@ import Image from "next/image";
 import Slider from "react-slick";
 import { IoMdAdd } from "react-icons/io";
 import Container from "../ui/Container";
+import Button from "../ui/Button";
 
 const sliderItems = [
   {
@@ -71,7 +72,7 @@ export default function SimpleSlider() {
               </h1>
               <div>
                 <div className="flex flex-col-reverse items-start md:flex-row gap-12">
-                  <button className="lets-talk-btn">Let's Talk</button>
+                  <Button text="Let's Talk" variant="primary" />
                   <p className="text-[#ffffff80] text-[15px] leading-normal">
                     Lorem ipsum dolor sit amet, consectetur <br />
                     adipiscing elit, sed do eiusmod tempor incididunt <br />

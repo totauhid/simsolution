@@ -2,6 +2,7 @@ import PowerFullValues from "@/app/components/sections/PowerFullValues";
 import SubHero from "@/app/components/sections/SubHero";
 import TransformIdea from "@/app/components/sections/TransformIdea";
 import WhyWorkWithUs from "@/app/components/sections/WhyWorkWithUs";
+import Button from "@/app/components/ui/Button";
 import Container from "@/app/components/ui/Container";
 import { NextPage } from "next";
 
@@ -24,9 +25,7 @@ const Page: NextPage<Props> = ({}) => {
               sed do eiusmod tempor incididunt ut labor aliqua.
             </p>
 
-            <button className="lets-talk-btn text-black">
-              Talk To an Expert
-            </button>
+            <Button text="Talk To an Expert" variant="black" />
           </div>
         </Container>
       </section>
