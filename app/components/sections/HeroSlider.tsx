@@ -81,7 +81,7 @@ export default function SimpleSlider() {
               </div>
             </div>
 
-            <div className="relative hidden lg:block">
+            <div className="relative hidden goals-container">
               {/* item 01 */}
               <div className="absolute top-0 left-0 flex items-center group transform translate-x-[90px] translate-y-[50px]">
                 <div className="peer flex items-center gap-4 cursor-pointer">
@@ -104,7 +104,7 @@ export default function SimpleSlider() {
               </div>
 
               {/* item 02 */}
-              <div className="absolute top-0 left-0 flex items-center group transform translate-x-[330px] translate-y-[180px]">
+              <div className="absolute top-0 left-0 flex items-center group transform translate-x-[300px] translate-y-[180px]">
                 <div className="peer flex items-center gap-4 cursor-pointer">
                   <div className="relative bg-[#ffffff1a] h-12 w-12 grid place-content-center rounded-full group-hover:bg-primary transition-colors shrink-0">
                     <IoMdAdd size={22} />
@@ -125,7 +125,7 @@ export default function SimpleSlider() {
               </div>
 
               {/* item 03 */}
-              <div className="absolute top-0 left-0 flex items-center group transform translate-x-[220px] translate-y-[300px]">
+              <div className="absolute top-0 left-0 flex items-center group transform translate-x-[180px] translate-y-[300px]">
                 <div className="peer flex items-center gap-4 cursor-pointer">
                   <div className="relative bg-[#ffffff1a] h-12 w-12 grid place-content-center rounded-full group-hover:bg-primary transition-colors shrink-0">
                     <IoMdAdd size={22} />

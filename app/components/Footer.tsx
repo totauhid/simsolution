@@ -45,7 +45,7 @@ const Footer: NextPage<Props> = ({}) => {
       <div>
         <Container>
           <div className="py-[30px] text-center flex justify-between">
-            <span className="text-[15px] text-[#585d63]">&cpoy; SIM 2024</span>
+            <span className="text-[15px] text-[#585d63]">&copy; SIM 2024</span>
             <span className="text-[15px] text-[#585d63]">
               All Rights Reserved.
             </span>
