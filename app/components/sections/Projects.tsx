@@ -9,72 +9,12 @@ import project1 from "@/public/images/project/project-1.jpg";
 import project2 from "@/public/images/project/project-2.jpg";
 import project3 from "@/public/images/project/project-3.jpg";
 import project4 from "@/public/images/project/project-4.jpg";
-import { IoArrowBackOutline, IoArrowForwardOutline } from "react-icons/io5";
+
+import { settings } from "../slider/project-slider/settings";
+
 
 const Projects = () => {
-  const NextArrow = (props: any) => {
-    const { onClick } = props;
-    return (
-      <div
-        className="group hover:text-primary transition absolute z-20 right-0 top-0 inline-flex items-center gap-2 justify-center text-[16px] cursor-pointer transform -translate-y-[80px]"
-        onClick={onClick}
-      >
-        <span className="hidden md:block group-hover:text-primary transition">
-          Next
-        </span>
-        <IoArrowForwardOutline />
-      </div>
-    );
-  };
 
-  const PrevArrow = (props: any) => {
-    const { onClick } = props;
-    return (
-      <div
-        className="group hover:text-primary transition absolute z-20 right-0 top-0 inline-flex items-center gap-2 justify-center text-[16px] cursor-pointer transform -translate-y-[80px] -translate-x-[50px] md:-translate-x-[100px]"
-        onClick={onClick}
-      >
-        <IoArrowBackOutline />
-        <span className="hidden md:block group-hover:text-primary transition">
-          Prev
-        </span>
-      </div>
-    );
-  };
-
-  var settings = {
-    dots: false,
-    infinite: true,
-    speed: 300,
-    slidesToShow: 2,
-    slidesToScroll: 1,
-    autoplay: true,
-    nextArrow: <NextArrow />,
-    prevArrow: <PrevArrow />,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-        },
-      },
-      {
-        breakpoint: 850,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-        },
-      },
-      {
-        breakpoint: 690,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-    ],
-  };
   return (
     <section className="py-[100px]">
       <Container>
