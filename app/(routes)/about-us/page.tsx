@@ -8,7 +8,7 @@ import { NextPage } from "next";
 
 interface Props {}
 
-const Page: NextPage<Props> = ({}) => {
+const AboutUs: NextPage<Props> = ({}) => {
   return (
     <>
       <section>
@@ -37,4 +37,4 @@ const Page: NextPage<Props> = ({}) => {
   );
 };
 
-export default Page;
+export default AboutUs;
