@@ -6,7 +6,7 @@ import { navLinks } from "../lib";
 import { usePathname } from "next/navigation";
 import Container from "./ui/Container";
 import { useEffect, useState } from "react";
-import { useStickyStore } from "@/lib/state";
+import { useStickyStore } from "@/lib/store";
 
 const Header = () => {
   const pathname = usePathname();
