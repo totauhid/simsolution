@@ -13,13 +13,13 @@ const HowWeCanHelp = () => {
   return (
     <section className="py-[100px]">
       <Container>
-        <h2 className="text-[42px]">
+        <h2 className="text-[30px] md:text-[35px] lg:text-[42px]">
           How We Can <span className="highlight">Help You</span>
         </h2>
 
-        <div className="flex justify-between gap-8">
+        <div className="flex-row lg:flex justify-between gap-8">
           <div>
-            <h4 className="text-[22px] text-[#121820] mt-[30px] mb-[60px]">
+            <h4 className="text-[22px] text-[#121820] mt-[30px] mb-[30px] lg:mb-[60px]">
               IT Services
             </h4>
             <Service
@@ -45,7 +45,7 @@ const HowWeCanHelp = () => {
           </div>
 
           <div>
-            <h4 className="text-[22px] text-[#121820] mt-[30px] mb-[60px]">
+            <h4 className="text-[22px] text-[#121820] mt-[30px] mb-[30px] lg:mb-[60px]">
               IT Solutions
             </h4>
             <Service

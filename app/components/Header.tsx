@@ -50,7 +50,7 @@ const Header = () => {
             )}
           </Link>
 
-          <ul className="ml-auto flex items-center gap-7">
+          <ul className="ml-auto items-center gap-7 hidden lg:flex">
             {navLinks.map((link) => (
               <li
                 className={`relative pr-3 ${link.new ? "new" : ""}`}

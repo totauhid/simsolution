@@ -9,8 +9,8 @@ const Footer: NextPage<Props> = ({}) => {
     <footer className="bg-[#171717ff]">
       <div className="bg-[#121820]">
         <Container>
-          <div className="flex justify-between text-white py-[50px]">
-            <div className="flex gap-6">
+          <div className="flex items-center flex-col lg:flex-row justify-between text-white py-[50px] gap-4 lg:gap-2">
+            <div className="flex gap-6 flex-wrap justify-center">
               <Link className="hover:text-primary transition-colors" href={"/"}>
                 Facebook
               </Link>
@@ -28,7 +28,7 @@ const Footer: NextPage<Props> = ({}) => {
               </Link>
             </div>
 
-            <div className="flex gap-6">
+            <div className="flex gap-6 flex-wrap justify-center">
               <Link className="hover:text-primary transition-colors" href={"/"}>
                 Terms & Condition
               </Link>

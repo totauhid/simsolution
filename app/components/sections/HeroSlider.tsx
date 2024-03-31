@@ -43,7 +43,7 @@ export default function SimpleSlider() {
         {sliderItems.map((slider, _i) => (
           <div
             key={_i}
-            className="relative w-full h-[70vh] md:h-[70vh] lg:h-[100vh]"
+            className="relative w-full h-[80vh] md:h-[70vh] lg:h-[100vh]"
           >
             <Image
               className="grayscale"
@@ -60,7 +60,7 @@ export default function SimpleSlider() {
       <div className="absolute z-20 flex items-center top-0 left-0 right-0 bottom-0">
         <Container>
           <div className="text-white flex gap-16">
-            <div className="flex flex-col gap-16">
+            <div className="flex flex-col gap-8 md:gap-8 lg:gap-16">
               <p className="text-[18px] text-white">
                 The Next <span className="highlight">Gen</span>
               </p>
@@ -70,7 +70,7 @@ export default function SimpleSlider() {
                 <span className="highlight font-satisfied">To Enterprise</span>
               </h1>
               <div>
-                <div className="flex gap-12">
+                <div className="flex flex-col-reverse items-start md:flex-row gap-12">
                   <button className="lets-talk-btn">Let's Talk</button>
                   <p className="text-[#ffffff80] text-[15px] leading-normal">
                     Lorem ipsum dolor sit amet, consectetur <br />

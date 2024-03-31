@@ -16,10 +16,10 @@ const Projects = () => {
     const { onClick } = props;
     return (
       <div
-        className="absolute z-20 right-0 top-0 inline-flex items-center gap-2 justify-center text-[16px] cursor-pointer transform -translate-y-[90px]"
+        className="absolute z-20 right-0 top-0 inline-flex items-center gap-2 justify-center text-[16px] cursor-pointer transform -translate-y-[80px]"
         onClick={onClick}
       >
-        Next
+        <span className="hidden md:block">Next</span>
         <IoArrowForwardOutline />
       </div>
     );
@@ -29,11 +29,11 @@ const Projects = () => {
     const { onClick } = props;
     return (
       <div
-        className="absolute z-20 right-0 top-0 inline-flex items-center gap-2 justify-center text-[16px] cursor-pointer transform -translate-y-[90px] -translate-x-[100px]"
+        className="absolute z-20 right-0 top-0 inline-flex items-center gap-2 justify-center text-[16px] cursor-pointer transform -translate-y-[80px] -translate-x-[50px] md:-translate-x-[100px]"
         onClick={onClick}
       >
         <IoArrowBackOutline />
-        Prev
+        <span className="hidden md:block">Prev</span>
       </div>
     );
   };
@@ -63,7 +63,7 @@ const Projects = () => {
         },
       },
       {
-        breakpoint: 480,
+        breakpoint: 690,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
@@ -74,7 +74,9 @@ const Projects = () => {
   return (
     <section className="py-[100px]">
       <Container>
-        <h2 className="text-[42px] text-[#121820]">Latest Projects</h2>
+        <h2 className="text-[30px] md:text-[35px] lg:text-[42px]">
+          Latest Projects
+        </h2>
 
         <div className="py-12 relative">
           <Slider {...settings}>
