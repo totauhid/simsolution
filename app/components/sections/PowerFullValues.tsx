@@ -11,11 +11,11 @@ const PowerFullValues = () => {
           <p>Discover Our Company</p>
         </div>
 
-        <h3 className="text-[42px] mb-[120px]">
+        <h3 className="text-[30px] md:text-[35px] lg:text-[42px] mb-[50px] md:mb-[80px] lg:mb-[120px]">
           We Live by <span className="highlight">Powerful</span> Values
         </h3>
 
-        <div className="grid grid-cols-3 gap-x-[30px] gap-y-[60px]">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-[30px] gap-y-[60px]">
           <PowerfullValueCard
             title="We Are"
             description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."

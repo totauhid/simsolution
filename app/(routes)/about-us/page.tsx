@@ -16,8 +16,8 @@ const Page: NextPage<Props> = ({}) => {
 
       <section className="py-[100px]">
         <Container>
-          <div className="flex justify-between items-center">
-            <p className="text-[22px]">
+          <div className="flex flex-col md:flex-row gap-12 justify-between items-center">
+            <p className="text-[20px] md:text-[22px]">
               Lorem ipsum dolor sit amet,{" "}
               <span className="highlight">consectetur adipiscing elit</span>,
               <br />
