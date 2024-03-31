@@ -209,3 +209,9 @@
   font-size: 8px !important;
   color: white !important;
 }
+
+@media (min-width: 1140px) {
+  .goals-container {
+    display: block !important;
+  }
+}

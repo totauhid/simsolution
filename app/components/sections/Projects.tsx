@@ -16,10 +16,12 @@ const Projects = () => {
     const { onClick } = props;
     return (
       <div
-        className="absolute z-20 right-0 top-0 inline-flex items-center gap-2 justify-center text-[16px] cursor-pointer transform -translate-y-[80px]"
+        className="group hover:text-primary transition absolute z-20 right-0 top-0 inline-flex items-center gap-2 justify-center text-[16px] cursor-pointer transform -translate-y-[80px]"
         onClick={onClick}
       >
-        <span className="hidden md:block">Next</span>
+        <span className="hidden md:block group-hover:text-primary transition">
+          Next
+        </span>
         <IoArrowForwardOutline />
       </div>
     );
@@ -29,11 +31,13 @@ const Projects = () => {
     const { onClick } = props;
     return (
       <div
-        className="absolute z-20 right-0 top-0 inline-flex items-center gap-2 justify-center text-[16px] cursor-pointer transform -translate-y-[80px] -translate-x-[50px] md:-translate-x-[100px]"
+        className="group hover:text-primary transition absolute z-20 right-0 top-0 inline-flex items-center gap-2 justify-center text-[16px] cursor-pointer transform -translate-y-[80px] -translate-x-[50px] md:-translate-x-[100px]"
         onClick={onClick}
       >
         <IoArrowBackOutline />
-        <span className="hidden md:block">Prev</span>
+        <span className="hidden md:block group-hover:text-primary transition">
+          Prev
+        </span>
       </div>
     );
   };
@@ -51,7 +55,7 @@ const Projects = () => {
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 3,
+          slidesToShow: 2,
           slidesToScroll: 1,
         },
       },
