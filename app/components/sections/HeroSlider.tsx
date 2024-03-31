@@ -43,7 +43,7 @@ export default function SimpleSlider() {
         {sliderItems.map((slider, _i) => (
           <div
             key={_i}
-            className="relative w-full h-[30vh] md:h-[50vh] lg:h-[100vh]"
+            className="relative w-full h-[70vh] md:h-[70vh] lg:h-[100vh]"
           >
             <Image
               className="grayscale"
@@ -65,7 +65,7 @@ export default function SimpleSlider() {
                 The Next <span className="highlight">Gen</span>
               </p>
 
-              <h1 className="text-6xl leading-normal">
+              <h1 className="text-[1.8rem] md:text-[2.2rem] lg:text-[3.2vw] leading-normal">
                 WE PROVIDE SERVICES <br /> AND SOLUTIONS{" "}
                 <span className="highlight font-satisfied">To Enterprise</span>
               </h1>
@@ -81,7 +81,7 @@ export default function SimpleSlider() {
               </div>
             </div>
 
-            <div className="relative">
+            <div className="relative hidden lg:block">
               {/* item 01 */}
               <div className="absolute top-0 left-0 flex items-center group transform translate-x-[90px] translate-y-[50px]">
                 <div className="peer flex items-center gap-4 cursor-pointer">
