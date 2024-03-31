@@ -13,7 +13,7 @@ const Page: NextPage<Props> = ({}) => {
 
       <section className="py-[100px]">
         <Container>
-          <h1 className="relative">hello</h1>
+          <h1 className="relative">Contact page...</h1>
         </Container>
       </section>
     </>
