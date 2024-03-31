@@ -6,7 +6,7 @@ import { NextPage } from "next";
 
 interface Props {}
 
-const Page: NextPage<Props> = ({}) => {
+const Services: NextPage<Props> = ({}) => {
   return (
     <>
       <section>
@@ -77,4 +77,4 @@ const Page: NextPage<Props> = ({}) => {
   );
 };
 
-export default Page;
+export default Services;

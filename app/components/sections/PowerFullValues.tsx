@@ -4,6 +4,39 @@ import PowerfullValueCard from "../ui/PowerfullValueCard";
 import SubtitleDot from "../ui/SubtitleDot";
 
 const PowerFullValues = () => {
+  const valuesData = [
+    {
+      title: "We Are",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    },
+    {
+      title: "We Deep Dive",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    },
+    {
+      title: "We Take",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    },
+    {
+      title: "We Value",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    },
+    {
+      title: "We Believe",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    },
+    {
+      title: "We Say “We”",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    },
+  ];
+
   return (
     <section className="py-[100px] bg-[#F3F3F4]">
       <Container>
@@ -14,35 +47,13 @@ const PowerFullValues = () => {
         </h3>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-[30px] gap-y-[60px]">
-          <PowerfullValueCard
-            title="We Are"
-            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-          />
-
-          <PowerfullValueCard
-            title="We Deep Dive"
-            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-          />
-
-          <PowerfullValueCard
-            title="We Take"
-            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-          />
-
-          <PowerfullValueCard
-            title="We Value"
-            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-          />
-
-          <PowerfullValueCard
-            title="We Believe"
-            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-          />
-
-          <PowerfullValueCard
-            title="We Say “We”"
-            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-          />
+          {valuesData.map(({ title, description }, _i) => (
+            <PowerfullValueCard
+              key={_i}
+              title={title}
+              description={description}
+            />
+          ))}
         </div>
       </Container>
     </section>
