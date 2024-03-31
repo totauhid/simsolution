@@ -9,10 +9,10 @@ export default function Home() {
   return (
     <>
       <HeroSlider />
-      <Brand />
-      <Container>
+      {/* <Brand /> */}
+      {/* <Container>
         <Divider />
-      </Container>
+      </Container> */}
       <HowWeCanHelp />
       <Container>
         <Divider />

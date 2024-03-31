@@ -12,7 +12,9 @@ const Page: NextPage<Props> = ({}) => {
       </section>
 
       <section className="py-[100px]">
-        <Container>Contact Page</Container>
+        <Container>
+          <h1 className="relative">hello</h1>
+        </Container>
       </section>
     </>
   );

@@ -34,19 +34,30 @@ const Header = () => {
         <nav className="flex items-center h-[100px]">
           <Link href={"/"}>
             {!stickyActive ? (
-              <Image
-                src={"/images/logo.png"}
-                height={30}
-                width={140}
-                alt="sim-logo"
-              />
+              <div className="flex items-center gap-3">
+                <Image
+                  src={"/images/logo1.png"}
+                  height={40}
+                  width={40}
+                  alt="sim-logo"
+                  style={{
+                    backgroundSize: "cover",
+                  }}
+                />
+
+                <span className="text-[#fff]">SIM SOLUTION LTD</span>
+              </div>
             ) : (
-              <Image
-                src={"/images/logo-dark.png"}
-                height={30}
-                width={140}
-                alt="sim-logo"
-              />
+              <div className="flex items-center text-white gap-3">
+                <Image
+                  src={"/images/logo1.png"}
+                  height={40}
+                  width={40}
+                  alt="sim-logo"
+                />
+
+                <span className="text-[#121820]">SIM SOLUTION LTD</span>
+              </div>
             )}
           </Link>
 

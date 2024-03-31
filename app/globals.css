@@ -11,6 +11,12 @@
   font-optical-sizing: auto;
 }
 
+:root {
+  /* --primary-color: #f57c00; */
+  /* --primary-color: #18b313; */
+  --primary-color: #4da0ff;
+}
+
 @layer components {
   nav ul li.new::after {
     content: "";
@@ -21,13 +27,13 @@
     width: 8px;
     height: 8px;
     border-radius: 50%;
-    border: 2px solid #f57c00;
+    border: 2px solid var(--primary-color);
   }
 
   .active,
   .highlight,
   nav ul li a:hover {
-    color: #f57c00 !important;
+    color: var(--primary-color) !important;
     @apply transition-colors;
   }
 
@@ -59,7 +65,7 @@
     width: 25px;
     border-right: 5px solid #fff;
     height: 100%;
-    background-color: #f57c00;
+    background-color: var(--primary-color);
     position: absolute;
     top: 0;
     left: 0;
@@ -98,7 +104,7 @@
 
   .brand-circle:hover::after {
     transform: translateY(-4px) scale(1);
-    background-color: #f57c00;
+    background-color: var(--primary-color);
   }
 
   /* section divider */
@@ -108,7 +114,7 @@
     width: 25px;
     border-right: 5px solid #fff;
     height: 100%;
-    background-color: #f57c00;
+    background-color: var(--primary-color);
     position: absolute;
     top: 0;
     left: 0;
@@ -122,7 +128,7 @@
     top: 0;
     right: 0;
     height: 100%;
-    background-color: #f57c00;
+    background-color: var(--primary-color);
     position: absolute;
     border-right: none;
     border-left: 5px solid #fff;
@@ -134,7 +140,7 @@
     width: 25px;
     border-right: 5px solid #fff;
     height: 100%;
-    background-color: #f57c00;
+    background-color: var(--primary-color);
     position: absolute;
     top: 0;
     left: 0;
@@ -144,7 +150,7 @@
   .help-circle::after {
     content: "";
     display: inline-block;
-    background-color: #f57c00;
+    background-color: var(--primary-color);
     border-radius: 50%;
     position: absolute;
     bottom: -2px;
@@ -159,7 +165,7 @@
     content: "";
     display: inline-block;
     border-radius: 50%;
-    background-color: #f57c00;
+    background-color: var(--primary-color);
     width: 18px;
     height: 18px;
     z-index: -1;
@@ -183,11 +189,11 @@
 
 @layer utilities {
   .text-primary {
-    color: #f57c00;
+    color: var(--primary-color);
   }
 
   .bg-primary {
-    background-color: #f57c00;
+    background-color: var(--primary-color);
   }
 }
 
@@ -202,6 +208,15 @@
   color: white !important;
 }
 
+.border-btn {
+  border-color: var(--primary-color);
+}
+
+.border-btn:hover {
+  /* hover:shadow-[inset_0_0_0_1px_#f57c00] */
+
+  box-shadow: inset 0 0 0 1px var(--primary-color);
+}
 @media (min-width: 1140px) {
   .goals-container {
     display: block !important;
