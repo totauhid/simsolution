@@ -19,7 +19,7 @@ const Page: NextPage<Props> = ({}) => {
               <span className="h-[7px] w-[7px] bg-primary rounded-full inline-block"></span>
               <p>Services and Solutions</p>
             </div>
-            <h3 className="text-[42px]">
+            <h3 className="text-[30px] md:text-[35px] lg:text-[42px]">
               Our SaaS Development Services Let You Win Big
             </h3>
 
@@ -29,7 +29,7 @@ const Page: NextPage<Props> = ({}) => {
             </p>
           </div>
 
-          <div className="grid grid-cols-3 place-content-center gap-x-[30px] gap-y-[60px]">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-content-center gap-x-[30px] gap-y-[60px]">
             <SassCard
               serial="01"
               shape="circle"

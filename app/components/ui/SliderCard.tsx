@@ -20,9 +20,9 @@ const SliderCard: NextPage<Props> = ({ img, title, description, madeBy }) => {
         />
       </div>
 
-      <div className="flex mt-[30px]">
+      <div className="flex flex-col lg:flex-row mt-[30px] gap-5">
         <div className="flex-1">
-          <h3 className="mb-[20px] text-[22px]">{title}</h3>
+          <h3 className="mb-[15px] lg:mb-[20px] text-[22px]">{title}</h3>
           <p>
             by: <span className="highlight">{madeBy}</span>
           </p>

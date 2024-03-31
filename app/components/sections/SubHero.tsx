@@ -26,8 +26,8 @@ const SubHero: NextPage<Props> = ({ title, history }) => {
   }, [stickyActive]);
 
   return (
-    <div className=" h-[550px] w-full">
-      <div className="bg-[#F3F3F4] h-[550px] relative">
+    <div className="w-full">
+      <div className="bg-[#F3F3F4] h-[400px] lg:h-[550px] relative">
         <Container>
           <Image
             className="invert opacity-[0.05] absolute top-0 left-0 w-full h-full z-[3]"
@@ -39,7 +39,7 @@ const SubHero: NextPage<Props> = ({ title, history }) => {
               objectPosition: "center",
             }}
           />
-          <div className="pt-60 flex justify-between z-10">
+          <div className="pt-44 lg:pt-60 flex justify-between z-10">
             <div className="flex flex-col justify-center gap-8">
               <div className="flex items-center gap-4 text-[15px]">
                 <Link
@@ -52,7 +52,7 @@ const SubHero: NextPage<Props> = ({ title, history }) => {
                 <span className="text-[#12182066]">{history}</span>
               </div>
 
-              <h3 className="text-[42px]">{title}</h3>
+              <h3 className="text-[25px] md:text-[2.8vw]">{title}</h3>
             </div>
 
             <Image
