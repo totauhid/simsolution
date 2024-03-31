@@ -18,7 +18,9 @@ const WhyWorkWithUs = () => {
           <p>Discover Our Company</p>
         </div>
 
-        <h3 className="text-[42px] mb-[120px]">Why Work With Us</h3>
+        <h3 className="text-[30px] md:text-[35px] lg:text-[42px] mb-[50px] md:mb-[80px] lg:mb-[120px]">
+          Why Work With Us
+        </h3>
 
         <div>
           <Divider />

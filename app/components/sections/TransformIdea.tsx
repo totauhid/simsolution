@@ -6,10 +6,10 @@ const TransformIdea = () => {
   return (
     <section className="py-[100px] bg-[#F3F3F4]">
       <Container>
-        <div className="flex justify-between items-center gap-32">
-          <div className="shrink-0 relative w-[28vw] h-[28vw]">
-            <div className="bg-primary w-[28vw] h-[28vw] absolute top-0 left-0 rounded-full"></div>
-            <div className="absolute w-[29vw] h-[29vw] -top-[21px] -left-[14px] rounded-full overflow-dhidden">
+        <div className="flex flex-col lg:flex-row justify-center lg:justify-between items-center gap-12 md:gap-20 lg:gap-32">
+          <div className="shrink-0 relative w-[280px] h-[280px] sm:h-[380px] sm:w-[380px] lg:w-[28vw] lg:h-[28vw]">
+            <div className="bg-primary w-[280px] h-[280px] sm:w-[380px] sm:h-[380px] lg:w-[28vw] lg:h-[28vw] absolute top-0 left-0 rounded-full"></div>
+            <div className="absolute w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] lg:w-[29vw] lg:h-[29vw] -top-[21px] -left-[14px] rounded-full overflow-dhidden">
               <Image
                 className="rounded-full grayscale"
                 src="/images/eye-gudget.png"
@@ -24,14 +24,14 @@ const TransformIdea = () => {
               <span className="h-[7px] w-[7px] bg-primary rounded-full inline-block"></span>
               <p>Firm Overview</p>
             </div>
-            <h3 className="text-[42px]">
+            <h3 className="text-[30px] md:text-[35px] lg:text-[42px]">
               We Specialize in <br />
               <span className="highlight">Transforming Your Idea</span> or{" "}
               <br />
               Business in The Current <br /> Digital Era.
             </h3>
 
-            <p className="text-[15px] text-[#12182066] my-[50px]">
+            <p className="text-[15px] text-[#12182066] my-[30px] lg:my-[50px]">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis
               ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas

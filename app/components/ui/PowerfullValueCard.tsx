@@ -8,7 +8,7 @@ interface Props {
 
 const PowerfullValueCard: NextPage<Props> = ({ title, description }) => {
   return (
-    <div className="flex flex-col gap-[30px]">
+    <div className="flex flex-col gap-[20px] md:gap-[30px]">
       <div className="h-[75px] w-[75px] bg-[#E8E8EA] rounded-full grid place-content-center">
         <div className="relative help-circle h-[40px] w-[40px] shrink-0 z-10">
           <Image src="/images/help-icon/7.svg" fill alt="icon" />
