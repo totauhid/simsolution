@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import Container from "../ui/Container";
+import SubtitleDot from "../ui/SubtitleDot";
 
 const TransformIdea = () => {
   return (
@@ -20,10 +21,8 @@ const TransformIdea = () => {
           </div>
 
           <div>
-            <div className="flex items-center gap-[10px] mb-[30px]">
-              <span className="h-[7px] w-[7px] bg-primary rounded-full inline-block"></span>
-              <p>Firm Overview</p>
-            </div>
+            <SubtitleDot subtitle="Firm Overview" />
+
             <h3 className="text-[30px] md:text-[35px] lg:text-[42px]">
               We Specialize in <br />
               <span className="highlight">Transforming Your Idea</span> or{" "}

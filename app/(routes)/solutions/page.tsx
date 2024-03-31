@@ -1,5 +1,6 @@
 import SubHero from "@/app/components/sections/SubHero";
 import Container from "@/app/components/ui/Container";
+import SubtitleDot from "@/app/components/ui/SubtitleDot";
 import TechnologyCard from "@/app/components/ui/TechnologyCard";
 import { NextPage } from "next";
 
@@ -14,10 +15,8 @@ const Page: NextPage<Props> = ({}) => {
 
       <section className="py-[100px]">
         <Container>
-          <div className="flex items-center gap-[10px]">
-            <span className="h-[7px] w-[7px] bg-primary rounded-full inline-block"></span>
-            <p>Our Tools</p>
-          </div>
+          <SubtitleDot subtitle="Our Tools" />
+
           <h3 className="text-[30px] md:text-[35px] lg:text-[42px] mt-[30px] mb-[90px]">
             AI Development <span className="highlight">Tech Stack</span>
           </h3>

@@ -1,6 +1,7 @@
 import SubHero from "@/app/components/sections/SubHero";
 import Container from "@/app/components/ui/Container";
 import SassCard from "@/app/components/ui/SassCard";
+import SubtitleDot from "@/app/components/ui/SubtitleDot";
 import { NextPage } from "next";
 
 interface Props {}
@@ -15,10 +16,8 @@ const Page: NextPage<Props> = ({}) => {
       <section className="py-[100px]">
         <Container>
           <div className="flex flex-col gap-[30px] mb-[90px]">
-            <div className="flex items-center gap-[10px]">
-              <span className="h-[7px] w-[7px] bg-primary rounded-full inline-block"></span>
-              <p>Services and Solutions</p>
-            </div>
+            <SubtitleDot subtitle="Services and Solutions" />
+
             <h3 className="text-[30px] md:text-[35px] lg:text-[42px]">
               Our SaaS Development Services Let You Win Big
             </h3>
