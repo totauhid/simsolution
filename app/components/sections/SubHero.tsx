@@ -39,7 +39,7 @@ const SubHero: NextPage<Props> = ({ title, history }) => {
               objectPosition: "center",
             }}
           />
-          <div className="pt-44 lg:pt-60 flex justify-between z-10">
+          <div className="pt-44 lg:pt-60 flex justify-between z-10 relative">
             <div className="flex flex-col justify-center gap-8">
               <div className="flex items-center gap-4 text-[15px]">
                 <Link
@@ -60,7 +60,7 @@ const SubHero: NextPage<Props> = ({ title, history }) => {
               alt="perticles"
               width={220}
               height={140}
-              className="transform rotate-90"
+              className="transform rotate-90 absolute right-0 -z-[1] opacity-50 md:opacity-100"
             />
           </div>
         </Container>
