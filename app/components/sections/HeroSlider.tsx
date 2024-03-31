@@ -7,6 +7,7 @@ import Slider from "react-slick";
 import { IoMdAdd } from "react-icons/io";
 import Container from "../ui/Container";
 import Button from "../ui/Button";
+import { settings } from "../slider/hero-slider/settings";
 
 const sliderItems = [
   {
@@ -26,18 +27,6 @@ const sliderItems = [
 ];
 
 export default function SimpleSlider() {
-  var settings = {
-    dots: false,
-    infinite: true,
-    speed: 1500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true,
-    nextArrow: <></>,
-    prevArrow: <></>,
-    fade: true,
-    pauseOnHover: false,
-  };
   return (
     <section className="relative bg-[#3E434A]">
       <Slider {...settings}>
