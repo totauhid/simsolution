@@ -12,7 +12,7 @@ const Button: NextPage<Props> = ({ text, variant }) => {
 
   return (
     <button
-      className={`py-[18px] lg:py-[22.5px] px-[60px] rounded-full border-2 border-[#f57c00] flex shrink-0 items-center hover:shadow-[inset_0_0_0_1px_#f57c00] ${color}`}
+      className={`py-[18px] lg:py-[22.5px] px-[60px] rounded-full border-2 border-btn flex shrink-0 items-center ${color}`}
     >
       {text}
     </button>
