@@ -77,7 +77,7 @@ export default function SimpleSlider() {
                 <div className="peer flex items-center gap-4 cursor-pointer">
                   <div className="relative bg-[#ffffff1a] h-12 w-12 grid place-content-center rounded-full group-hover:bg-primary transition-colors shrink-0">
                     <IoMdAdd size={22} />
-                    
+
                     <span className="animate-ping absolute group-hover:inline-flex h-full w-full rounded-full bg-white opacity-40 hidden transition"></span>
                   </div>
                   <span className="group-hover:text-primary transition-colors shrink-0 text-white">
@@ -86,13 +86,15 @@ export default function SimpleSlider() {
                 </div>
 
                 <div className="absolute card w-[260px] bg-white rounded-[5px] p-5 transform transition-[2000ms] -translate-x-[110px] -translate-y-[140px] opacity-0 invisible peer-hover:visible peer-hover:-translate-y-[130px] peer-hover:opacity-100">
-                  <h3 className="text-black">Experts</h3>
+                  <h3 className="text-black">Team Strength</h3>
                   <span className="divider relative"></span>
                   <p className=" text-[#12182066]">
                     With expertise across various IT domains, our team
                     collaborates closely with stakeholders to deliver tailored
                     solutions and support the organization's strategic
-                    objectives.
+                    objectives. Our expert team collaborates closely with
+                    stakeholders to deliver tailored solutions and support the
+                    organization's strategic objectives.
                   </p>
                 </div>
               </div>
@@ -110,7 +112,7 @@ export default function SimpleSlider() {
                 </div>
 
                 <div className="absolute card w-[260px] bg-white rounded-[5px] p-5 transform transition-[2000ms] -translate-x-[110px] -translate-y-[140px] opacity-0 invisible peer-hover:visible peer-hover:-translate-y-[130px] peer-hover:opacity-100">
-                  <h3 className="text-black">Experts</h3>
+                  <h3 className="text-black">Developers</h3>
                   <span className="divider relative"></span>
                   <p className=" text-[#12182066]">
                     Maintaining systems, utilizing various programming languages
@@ -133,13 +135,13 @@ export default function SimpleSlider() {
                 </div>
 
                 <div className="absolute card w-[260px] bg-white rounded-[5px] p-5 transform transition-[2000ms] -translate-x-[110px] -translate-y-[140px] opacity-0 invisible peer-hover:visible peer-hover:-translate-y-[130px] peer-hover:opacity-100">
-                  <h3 className="text-black">Experts</h3>
+                  <h3 className="text-black">Designers</h3>
                   <span className="divider relative"></span>
                   <p className=" text-[#12182066]">
                     Designers collaborate with stakeholders, including
                     developers and clients, to transform ideas into tangible
                     designs that enhance brand identity, usability, and overall
-                    aesthetics.{" "}
+                    aesthetics.
                   </p>
                 </div>
               </div>
