@@ -1,3 +1,5 @@
+"use client";
+
 import PowerFullValues from "@/app/components/sections/PowerFullValues";
 import SubHero from "@/app/components/sections/SubHero";
 import TransformIdea from "@/app/components/sections/TransformIdea";

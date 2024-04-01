@@ -1,3 +1,5 @@
+"use client";
+
 import Brand from "../components/sections/Brand";
 import Divider from "../components/ui/Divider";
 import HeroSlider from "../components/sections/HeroSlider";

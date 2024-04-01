@@ -13,27 +13,31 @@ import { MdOutlineClose } from "react-icons/md";
 const Header = () => {
   const pathname = usePathname();
   const { stickyActive, setStickyActive } = useStickyStore();
-  const [width, setWidth] = useState(window.innerWidth);
+  const [width, setWidth] = useState<number>(); // Initialize width to null or another sensible default for SSR
 
-  const [mobileMenu, setMibileMenu] = useState<boolean>(false);
+  const [mobileMenu, setMobileMenu] = useState(false);
 
-  console.log(pathname);
+  console.log(width);
 
   useEffect(() => {
-    const header = document.querySelector("header");
+    // Define a function to update the width
+    const updateWidth = () => setWidth(window.innerWidth);
 
-    if (width > 1024) {
-      setStickyActive(false);
-      header?.classList.remove("sticky-active");
+    // Update width to current window width upon mount
+    updateWidth();
 
-      setMibileMenu(false);
-    } else {
-      setStickyActive(true);
-      header?.classList.add("sticky-active");
-    }
+    // Subscribe to window resize event
+    window.addEventListener("resize", updateWidth);
 
-    window.addEventListener("scroll", () => {
-      if (width > 1024) {
+    // Cleanup on unmount
+    return () => window.removeEventListener("resize", updateWidth);
+  }, []); // Empty dependency array ensures this runs once on mount
+
+  useEffect(() => {
+    const handleScroll = () => {
+      // Ensure `width` is not null to avoid execution on server render
+      if (width && width > 1024) {
+        const header = document.querySelector("header");
         if (window.scrollY > 50) {
           header?.classList.add("sticky-active");
           setStickyActive(true);
@@ -41,57 +45,44 @@ const Header = () => {
           header?.classList.remove("sticky-active");
           setStickyActive(false);
         }
-
-        setMibileMenu(false);
+        setMobileMenu(false);
       } else {
+        const header = document.querySelector("header");
         setStickyActive(true);
         header?.classList.add("sticky-active");
+        header?.classList.add("sdfsdf");
+
+        console.log(width);
       }
-    });
-
-    // width
-    const handleResize = () => {
-      setWidth(window.innerWidth);
     };
 
-    window.addEventListener("resize", handleResize);
+    // Attach scroll event listener
+    window.addEventListener("scroll", handleScroll);
 
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, [pathname, width]);
+    // Cleanup function to remove event listener
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [width]); // Reacting to changes in `width`
 
+  // Rest of your component...
   return (
-    <header className="fixed top-0 z-[1000] w-full">
+    <header className={`fixed top-0 z-[1000] w-full`}>
       <Container>
         <nav className="flex items-center h-[80px] md:h-[100px]">
           <Link href={"/"}>
-            {!stickyActive ? (
-              <div className="flex items-center gap-3">
-                <Image
-                  src={"/images/logo1.png"}
-                  height={40}
-                  width={40}
-                  alt="sim-logo"
-                  style={{
-                    backgroundSize: "cover",
-                  }}
-                />
+            <div className="flex items-center gap-3">
+              <Image
+                src={"/images/logo1.png"}
+                height={40}
+                width={40}
+                alt="sim-logo"
+              />
 
-                <span className="text-[#fff]">SIM SOLUTION LTD</span>
-              </div>
-            ) : (
-              <div className="flex items-center text-white gap-3">
-                <Image
-                  src={"/images/logo1.png"}
-                  height={40}
-                  width={40}
-                  alt="sim-logo"
-                />
-
-                <span className="text-[#121820]">SIM SOLUTION LTD</span>
-              </div>
-            )}
+              <span
+                className={`${stickyActive ? "text-[#121820]" : "text-white"}`}
+              >
+                SIM SOLUTION LTD
+              </span>
+            </div>
           </Link>
 
           <ul className="ml-auto items-center gap-7 hidden lg:flex">
@@ -114,7 +105,7 @@ const Header = () => {
 
           {/* humberger icon */}
           <div
-            onClick={() => setMibileMenu((prev) => !prev)}
+            onClick={() => setMobileMenu((prev) => !prev)}
             className="ml-auto lg:hidden cursor-pointer"
           >
             {!mobileMenu ? <FiMenu size={28} /> : <MdOutlineClose size={28} />}
@@ -132,7 +123,7 @@ const Header = () => {
                 key={link.name}
               >
                 <Link
-                  onClick={() => setMibileMenu(false)}
+                  onClick={() => setMobileMenu(false)}
                   href={link.path}
                   className={`text-white font-medium ${
                     pathname == link.path ? " active" : ""

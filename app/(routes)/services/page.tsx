@@ -1,3 +1,5 @@
+"use client";
+
 import SubHero from "@/app/components/sections/SubHero";
 import Container from "@/app/components/ui/Container";
 import SassCard from "@/app/components/ui/SassCard";
