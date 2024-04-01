@@ -5,7 +5,7 @@ interface Props {
 }
 
 const Container: NextPage<Props> = ({ children }) => {
-  return <div className="max-w-[1400px] px-6 m-auto w-full">{children}</div>;
+  return <div className="max-w-[1400px] px-6 mx-auto w-full">{children}</div>;
 };
 
 export default Container;

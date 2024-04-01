@@ -33,7 +33,7 @@ export default function SimpleSlider() {
         {sliderItems.map((slider, _i) => (
           <div
             key={_i}
-            className="relative w-full h-[80vh] md:h-[70vh] lg:h-[100vh]"
+            className="relative w-full h-[95vh] md:h-[90vh] lg:h-[100vh]"
           >
             <Image
               className="grayscale"
@@ -49,7 +49,7 @@ export default function SimpleSlider() {
 
       <div className="absolute z-20 flex items-center top-0 left-0 right-0 bottom-0">
         <Container>
-          <div className="text-white flex gap-16">
+          <div className="text-white flex gap-0 md:gap-0 lg:gap-16">
             <div className="flex flex-col gap-8 md:gap-8 lg:gap-16">
               <p className="text-[18px] text-white">
                 The Next <span className="highlight">Gen</span>
@@ -77,6 +77,7 @@ export default function SimpleSlider() {
                 <div className="peer flex items-center gap-4 cursor-pointer">
                   <div className="relative bg-[#ffffff1a] h-12 w-12 grid place-content-center rounded-full group-hover:bg-primary transition-colors shrink-0">
                     <IoMdAdd size={22} />
+                    
                     <span className="animate-ping absolute group-hover:inline-flex h-full w-full rounded-full bg-white opacity-40 hidden transition"></span>
                   </div>
                   <span className="group-hover:text-primary transition-colors shrink-0 text-white">
@@ -88,7 +89,10 @@ export default function SimpleSlider() {
                   <h3 className="text-black">Experts</h3>
                   <span className="divider relative"></span>
                   <p className=" text-[#12182066]">
-                   With expertise across various IT domains, our team collaborates closely with stakeholders to deliver tailored solutions and support the organization's strategic objectives.
+                    With expertise across various IT domains, our team
+                    collaborates closely with stakeholders to deliver tailored
+                    solutions and support the organization's strategic
+                    objectives.
                   </p>
                 </div>
               </div>
@@ -109,7 +113,9 @@ export default function SimpleSlider() {
                   <h3 className="text-black">Experts</h3>
                   <span className="divider relative"></span>
                   <p className=" text-[#12182066]">
-                    Maintaining systems, utilizing various programming languages and tools to bring ideas to life and solve complex problems in technology-driven environments. 
+                    Maintaining systems, utilizing various programming languages
+                    and tools to bring ideas to life and solve complex problems
+                    in technology-driven environments.
                   </p>
                 </div>
               </div>
@@ -130,7 +136,11 @@ export default function SimpleSlider() {
                   <h3 className="text-black">Experts</h3>
                   <span className="divider relative"></span>
                   <p className=" text-[#12182066]">
-                    Designers collaborate with stakeholders, including developers and clients, to transform ideas into tangible designs that enhance brand identity, usability, and overall aesthetics.                  </p>
+                    Designers collaborate with stakeholders, including
+                    developers and clients, to transform ideas into tangible
+                    designs that enhance brand identity, usability, and overall
+                    aesthetics.{" "}
+                  </p>
                 </div>
               </div>
             </div>
