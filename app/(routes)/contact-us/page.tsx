@@ -97,6 +97,11 @@ const ContactUs: NextPage<Props> = ({}) => {
 
             <div className="max-w-[292px] w-full bg-red-300">
               <h2>right sidebar</h2>
+              <h2>right sidebar</h2>
+              <h2>right sidebar</h2>
+              <h2>right sidebar</h2>
+              <h2>right sidebar</h2>
+              <h2>right sidebar</h2>
             </div>
           </div>
         </Container>
