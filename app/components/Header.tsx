@@ -20,6 +20,15 @@ const Header = () => {
   console.log(width);
 
   useEffect(() => {
+    if (width && width < 1024) {
+      const header = document.querySelector("header");
+      setStickyActive(true);
+      header?.classList.add("sticky-active");
+    } else {
+      const header = document.querySelector("header");
+      setStickyActive(false);
+      header?.classList.remove("sticky-active");
+    }
     // Define a function to update the width
     const updateWidth = () => setWidth(window.innerWidth);
 
@@ -31,7 +40,7 @@ const Header = () => {
 
     // Cleanup on unmount
     return () => window.removeEventListener("resize", updateWidth);
-  }, []); // Empty dependency array ensures this runs once on mount
+  }, [width]); // Empty dependency array ensures this runs once on mount
 
   useEffect(() => {
     const handleScroll = () => {
@@ -50,9 +59,6 @@ const Header = () => {
         const header = document.querySelector("header");
         setStickyActive(true);
         header?.classList.add("sticky-active");
-        header?.classList.add("sdfsdf");
-
-        console.log(width);
       }
     };
 
