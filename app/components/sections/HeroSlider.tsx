@@ -109,7 +109,7 @@ export default function SimpleSlider() {
                   <h3 className="text-black">Experts</h3>
                   <span className="divider relative"></span>
                   <p className=" text-[#12182066]">
-                    And here's some amazing content. It's very engaging. Right?
+                    Maintaining systems, utilizing various programming languages and tools to bring ideas to life and solve complex problems in technology-driven environments. 
                   </p>
                 </div>
               </div>
@@ -130,8 +130,7 @@ export default function SimpleSlider() {
                   <h3 className="text-black">Experts</h3>
                   <span className="divider relative"></span>
                   <p className=" text-[#12182066]">
-                    And here's some amazing content. It's very engaging. Right?
-                  </p>
+                    Designers collaborate with stakeholders, including developers and clients, to transform ideas into tangible designs that enhance brand identity, usability, and overall aesthetics.                  </p>
                 </div>
               </div>
             </div>
