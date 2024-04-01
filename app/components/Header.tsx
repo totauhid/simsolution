@@ -93,10 +93,7 @@ const Header = () => {
 
           <ul className="ml-auto items-center gap-7 hidden lg:flex">
             {navLinks.map((link) => (
-              <li
-                className={`relative pr-3 ${link.new ? "new" : ""}`}
-                key={link.name}
-              >
+              <li className={`relative pr-3 `} key={link.name}>
                 <Link
                   href={link.path}
                   className={`text-white font-medium ${
@@ -124,10 +121,7 @@ const Header = () => {
             }`}
           >
             {navLinks.map((link) => (
-              <li
-                className={`relative pr-3 ${link.new ? "new" : ""}`}
-                key={link.name}
-              >
+              <li className={`relative pr-3 `} key={link.name}>
                 <Link
                   onClick={() => setMobileMenu(false)}
                   href={link.path}
