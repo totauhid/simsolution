@@ -102,6 +102,8 @@ const ContactUs: NextPage<Props> = ({}) => {
               <h2>right sidebar</h2>
               <h2>right sidebar</h2>
               <h2>right sidebar</h2>
+              <h2>right sidebar</h2>
+  
             </div>
           </div>
         </Container>
