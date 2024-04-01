@@ -88,7 +88,7 @@ export default function SimpleSlider() {
                   <h3 className="text-black">Experts</h3>
                   <span className="divider relative"></span>
                   <p className=" text-[#12182066]">
-                    And here's some amazing content. It's very engaging. Right?
+                   With expertise across various IT domains, our team collaborates closely with stakeholders to deliver tailored solutions and support the organization's strategic objectives.
                   </p>
                 </div>
               </div>
