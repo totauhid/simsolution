@@ -3,7 +3,9 @@
 import SubHero from "@/app/components/sections/SubHero";
 import Button from "@/app/components/ui/Button";
 import Container from "@/app/components/ui/Container";
+import Divider from "@/app/components/ui/Divider";
 import InputField from "@/app/components/ui/InputField";
+import SubtitleDot from "@/app/components/ui/SubtitleDot";
 import TextareaField from "@/app/components/ui/TextareaField";
 import { NextPage } from "next";
 
@@ -95,7 +97,13 @@ const ContactUs: NextPage<Props> = ({}) => {
 
             {/* right side */}
             <div className="max-w-[292px] w-full">
-              <h2>Sidebar</h2>
+              <SubtitleDot subtitle="Support Request" />
+
+              <p className="mb-6">
+                Our experts are ready to answer your questions.
+              </p>
+
+              <Divider />
             </div>
           </div>
         </Container>
