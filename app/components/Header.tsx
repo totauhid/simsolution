@@ -40,7 +40,7 @@ const Header = () => {
 
     // Cleanup on unmount
     return () => window.removeEventListener("resize", updateWidth);
-  }, [width]); // Empty dependency array ensures this runs once on mount
+  }, [width, setStickyActive]); // Empty dependency array ensures this runs once on mount
 
   useEffect(() => {
     const handleScroll = () => {
@@ -67,7 +67,7 @@ const Header = () => {
 
     // Cleanup function to remove event listener
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [width]); // Reacting to changes in `width`
+  }, [width, setStickyActive]); // Reacting to changes in `width`
 
   // Rest of your component...
   return (

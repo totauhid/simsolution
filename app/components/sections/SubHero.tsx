@@ -23,7 +23,7 @@ const SubHero: NextPage<Props> = ({ title, history }) => {
     const header = document.querySelector("header");
     header?.classList.add("sticky-active");
     setStickyActive(true);
-  }, [stickyActive]);
+  }, [stickyActive, setStickyActive]);
 
   return (
     <div className="w-full">

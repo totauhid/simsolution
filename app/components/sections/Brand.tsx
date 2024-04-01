@@ -11,10 +11,9 @@ const Brand: NextPage<Props> = ({}) => {
       <Container>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3 place-items-center">
           {brandImg.map((img, _i) => (
-            <div className="relative brand-circle">
+            <div key={_i} className="relative brand-circle">
               <Image
                 className="grayscale hover:grayscale-0 transition-colors cursor-pointer"
-                key={_i}
                 src={img.src}
                 alt={img.alt}
                 height={40}
