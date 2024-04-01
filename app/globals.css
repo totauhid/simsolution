@@ -18,7 +18,7 @@
 }
 
 @layer components {
-  nav ul li.new::after {
+  /* nav ul li.new::after {
     content: "";
     position: absolute;
     display: inline-block;
@@ -28,7 +28,7 @@
     height: 8px;
     border-radius: 50%;
     border: 2px solid var(--primary-color);
-  }
+  } */
 
   .active,
   .highlight,
