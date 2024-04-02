@@ -15,7 +15,7 @@ const ServiceCard: NextPage<Props> = ({ img, serial, title, description }) => {
     <div>
       <SingleDivider />
       <div className="flex gap-10 lg:gap-20 py-[30px]">
-        <div className="relative help-circle h-[45px] w-[45px] shrink-0 ml-[30px] z-10 after:bg-primary">
+        <div className="relative help-circle h-[45px] w-[45px] shrink-0 md:ml-[30px] z-10 after:bg-primary">
           <Image src={img} fill alt="icon" />
         </div>
         <div>
