@@ -158,11 +158,11 @@ const ContactUs: NextPage<Props> = ({}) => {
 
           {/* map section */}
         </Container>
-        <div className="mt-[100px] grayscale">
+        <div className="mt-[70px] lg:mt-[100px] grayscale">
           <iframe
+            className="h-[300px] md:h-[450px] lg:h-[550px]"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4341.291500542269!2d90.38723939889319!3d23.7980919854986!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c746db04c093%3A0xbe64860ddee947aa!2sMaster%20Builder%20Limited%20(Corp.%20Office)!5e0!3m2!1sen!2sbd!4v1712029933188!5m2!1sen!2sbd"
             width="100%"
-            height="550"
             style={{ border: 0 }}
             allowFullScreen
             loading="lazy"
