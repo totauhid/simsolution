@@ -9,6 +9,10 @@ import InputField from "@/app/components/ui/InputField";
 import SubtitleDot from "@/app/components/ui/SubtitleDot";
 import TextareaField from "@/app/components/ui/TextareaField";
 import { NextPage } from "next";
+import Image from "next/image";
+
+import icon8 from "@/public/images/help-icon/8.svg";
+import icon9 from "@/public/images/help-icon/9.svg";
 
 interface Props {}
 
@@ -21,7 +25,7 @@ const ContactUs: NextPage<Props> = ({}) => {
 
       <section className="py-[100px]">
         <Container>
-          <div className="flex gap-[120px]">
+          <div className="flex flex-col lg:flex-row gap-[120px] ">
             {/* left side form */}
             <form className="flex-1">
               {/* step 01 */}
@@ -97,16 +101,58 @@ const ContactUs: NextPage<Props> = ({}) => {
             </form>
 
             {/* right side */}
-            <div className="max-w-[292px] w-full">
-              <SubtitleDot subtitle="Support Request" large />
+            <div className="lg:max-w-[292px] w-full">
+              <div className="mb-[60px]">
+                <SubtitleDot subtitle="Support Request" large />
+                <p className="mt-[30px] mb-[20px]">
+                  Our experts are ready to answer your questions.
+                </p>
+                <ArrowButtton text="Support Now" />
+              </div>
 
-              <p className="mb-6">
-                Our experts are ready to answer your questions.
-              </p>
+              <div className="mb-[60px]">
+                <Divider />
+              </div>
 
-              {/* <Divider /> */}
+              <div className="mb-[60px]">
+                <div className="relative sass-card">
+                  <div
+                    className={`h-[70px] w-[70px] bg-[#1218200D] text-[30px] grid place-items-center mb-[30px] rounded-full`}
+                  >
+                    <Image src={icon8} height={42} width={42} alt="icon" />
+                  </div>
+                </div>
+                <SubtitleDot subtitle="Need Help?" large />
+                <p>
+                  For technical questions or billing questions, please contact
+                  Customer Care.
+                </p>
+              </div>
 
-              <ArrowButtton text="Support Now" />
+              <div className="mb-[60px]">
+                <div className="relative sass-card">
+                  <div
+                    className={`h-[70px] w-[70px] bg-[#1218200D] text-[30px] grid place-items-center mb-[30px] rounded-full`}
+                  >
+                    <Image src={icon9} height={42} width={42} alt="icon" />
+                  </div>
+                </div>
+
+                <SubtitleDot subtitle="Need More Info?" large />
+                <p>
+                  For technical questions or billing questions, please contact
+                  Customer Care.
+                </p>
+              </div>
+
+              <div className="mb-[60px]">
+                <Divider />
+              </div>
+
+              <div className="flex flex-col gap-[15px]">
+                <ArrowButtton text="Legality Guide" />
+                <ArrowButtton text="Security Center" />
+              </div>
             </div>
           </div>
         </Container>
