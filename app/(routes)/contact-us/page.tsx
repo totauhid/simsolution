@@ -1,6 +1,7 @@
 "use client";
 
 import SubHero from "@/app/components/sections/SubHero";
+import ArrowButtton from "@/app/components/ui/ArrowButtton";
 import Button from "@/app/components/ui/Button";
 import Container from "@/app/components/ui/Container";
 import Divider from "@/app/components/ui/Divider";
@@ -21,7 +22,7 @@ const ContactUs: NextPage<Props> = ({}) => {
       <section className="py-[100px]">
         <Container>
           <div className="flex gap-[120px]">
-            {/* form */}
+            {/* left side form */}
             <form className="flex-1">
               {/* step 01 */}
               <h3 className="text-[22px] mb-[30px] lg:mb-[60px]">
@@ -97,13 +98,15 @@ const ContactUs: NextPage<Props> = ({}) => {
 
             {/* right side */}
             <div className="max-w-[292px] w-full">
-              <SubtitleDot subtitle="Support Request" />
+              <SubtitleDot subtitle="Support Request" large />
 
               <p className="mb-6">
                 Our experts are ready to answer your questions.
               </p>
 
-              <Divider />
+              {/* <Divider /> */}
+
+              <ArrowButtton text="Support Now" />
             </div>
           </div>
         </Container>

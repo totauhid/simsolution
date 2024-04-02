@@ -47,6 +47,7 @@ const Header = () => {
       // Ensure `width` is not null to avoid execution on server render
       if (width && width > 1024) {
         const header = document.querySelector("header");
+
         if (window.scrollY > 50) {
           header?.classList.add("sticky-active");
           setStickyActive(true);
