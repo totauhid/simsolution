@@ -17,8 +17,6 @@ const Header = () => {
 
   const [mobileMenu, setMobileMenu] = useState(false);
 
-  console.log(width);
-
   useEffect(() => {
     if (width && width < 1024) {
       const header = document.querySelector("header");
