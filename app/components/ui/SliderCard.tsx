@@ -11,7 +11,7 @@ interface Props {
 const SliderCard: NextPage<Props> = ({ img, title, description, madeBy }) => {
   return (
     <div className="group flex flex-col justify-center items-center px-5">
-      <div className="relative w-full h-[393px] rounded-[10px] overflow-hidden cursor-pointer transform duration-500 grayscale group-hover:grayscale-0">
+      <div className="relative w-full h-[300px] md:h-[340px] lg:h-[393px] rounded-[10px] overflow-hidden cursor-pointer transform duration-500 grayscale group-hover:grayscale-0">
         <Image
           src={img}
           alt={title}
