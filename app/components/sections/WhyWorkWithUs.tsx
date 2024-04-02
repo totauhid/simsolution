@@ -56,15 +56,15 @@ const WhyWorkWithUs = () => {
 
         <div>
           <Divider />
-          {worksData.map(({ img, title, description }) => (
-            <>
+          {worksData.map(({ img, title, description }, _i) => (
+            <div key={_i}>
               <WhyWorkWithCard
                 img={img}
                 title={title}
                 description={description}
               />
               <Divider />
-            </>
+            </div>
           ))}
         </div>
       </Container>
