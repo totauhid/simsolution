@@ -73,7 +73,7 @@ const Header = () => {
     <header className={`fixed top-0 z-[1000] w-full`}>
       <Container>
         <nav className="flex items-center h-[80px] md:h-[100px]">
-          <Link onClick={() => setMobileMenu((prev) => !prev)} href={"/"}>
+          <Link onClick={() => setMobileMenu(false)} href={"/"}>
             <div className="flex items-center gap-3">
               <Image
                 src={"/images/logo1.png"}
