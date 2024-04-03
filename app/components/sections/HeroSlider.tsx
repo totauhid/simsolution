@@ -8,6 +8,7 @@ import { IoMdAdd } from "react-icons/io";
 import Container from "../ui/Container";
 import Button from "../ui/Button";
 import { settings } from "../slider/hero-slider/settings";
+import Link from "next/link";
 
 const sliderItems = [
   {
@@ -61,7 +62,9 @@ export default function SimpleSlider() {
               </h1>
               <div>
                 <div className="flex flex-col-reverse items-start md:flex-row gap-12">
-                  <Button text="Let's Talk" variant="primary" />
+                  <Link href={"/contact-us"}>
+                    <Button text="Let's Talk" variant="primary" />
+                  </Link>
                   <p className="text-[#ffffff80] text-[15px] leading-normal">
                     Lorem ipsum dolor sit amet, consectetur <br />
                     adipiscing elit, sed do eiusmod tempor incididunt <br />
