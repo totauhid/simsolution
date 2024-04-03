@@ -13,10 +13,33 @@ import Image from "next/image";
 
 import icon8 from "@/public/images/help-icon/8.svg";
 import icon9 from "@/public/images/help-icon/9.svg";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { z } from "zod";
+import { contactFormSchema } from "@/schema";
 
 interface Props {}
 
 const ContactUs: NextPage<Props> = ({}) => {
+  type ValidationSchema = z.infer<typeof contactFormSchema>;
+
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    reset,
+  } = useForm<ValidationSchema>({
+    resolver: zodResolver(contactFormSchema),
+  });
+
+  const onSubmit = (data: ValidationSchema) => {
+    console.log(data);
+
+    console.log("ok");
+
+    reset();
+  };
+
   return (
     <>
       <section>
@@ -27,37 +50,100 @@ const ContactUs: NextPage<Props> = ({}) => {
         <Container>
           <div className="flex flex-col lg:flex-row gap-[120px] ">
             {/* left side form */}
-            <form className="flex-1">
+            <form className="flex-1" onSubmit={handleSubmit(onSubmit)}>
               {/* step 01 */}
               <h3 className="text-[22px] mb-[30px] lg:mb-[60px]">
                 <span className="highlight">01.</span> Tell Us About Yourself
               </h3>
 
               <div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-[30px]">
-                <InputField type="text" label="First Name" placeholder="Jhon" />
-                <InputField type="text" label="Last Name" placeholder="Doe" />
+                <div>
+                  <InputField
+                    type="text"
+                    label="First Name"
+                    placeholder="Jhon"
+                    register={{ ...register("firstName") }}
+                  />
+                  {errors.firstName && (
+                    <span className="text-red-500 text-xs">
+                      {errors.firstName.message}
+                    </span>
+                  )}
+                </div>
+
+                <div>
+                  <InputField
+                    type="text"
+                    label="Last Name"
+                    placeholder="Doe"
+                    register={{ ...register("lastName") }}
+                  />
+                  {errors.lastName && (
+                    <span className="text-red-500 text-xs">
+                      {errors.lastName.message}
+                    </span>
+                  )}
+                </div>
               </div>
 
               <div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-[30px]">
-                <InputField
-                  type="text"
-                  label="Email Address"
-                  placeholder="example@gmail.com"
-                />
-                <InputField
-                  type="number"
-                  label="Phone"
-                  placeholder="Enter your phone number"
-                />
+                <div>
+                  <InputField
+                    type="text"
+                    label="Email Address"
+                    placeholder="example@gmail.com"
+                    register={{ ...register("email") }}
+                  />
+                  {errors.email && (
+                    <span className="text-red-500 text-xs">
+                      {errors.email.message}
+                    </span>
+                  )}
+                </div>
+
+                <div>
+                  <InputField
+                    type="number"
+                    label="Phone"
+                    placeholder="Enter your phone number"
+                    register={{ ...register("phone") }}
+                  />
+                  {errors.phone && (
+                    <span className="text-red-500 text-xs">
+                      {errors.phone.message}
+                    </span>
+                  )}
+                </div>
               </div>
 
               <div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-[30px]">
-                <InputField
-                  type="text"
-                  label="Company"
-                  placeholder="Your Company name"
-                />
-                <InputField type="text" label="Role" placeholder="Your role" />
+                <div>
+                  <InputField
+                    type="text"
+                    label="Company"
+                    placeholder="Your Company name"
+                    register={{ ...register("company") }}
+                  />
+                  {errors.company && (
+                    <span className="text-red-500 text-xs">
+                      {errors.company.message}
+                    </span>
+                  )}
+                </div>
+
+                <div>
+                  <InputField
+                    type="text"
+                    label="Role"
+                    placeholder="Your role"
+                    register={{ ...register("role") }}
+                  />
+                  {errors.role && (
+                    <span className="text-red-500 text-xs">
+                      {errors.role.message}
+                    </span>
+                  )}
+                </div>
               </div>
 
               {/* step 02 */}
@@ -67,11 +153,19 @@ const ContactUs: NextPage<Props> = ({}) => {
               </h3>
 
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
-                <InputField
-                  type="text"
-                  label="Product Design"
-                  placeholder="Web Designer"
-                />
+                <div>
+                  <InputField
+                    type="text"
+                    label="Product Design"
+                    placeholder="Web Designer"
+                    register={{ ...register("projectDesign") }}
+                  />
+                  {errors.projectDesign && (
+                    <span className="text-red-500 text-xs">
+                      {errors.projectDesign.message}
+                    </span>
+                  )}
+                </div>
               </div>
 
               {/* step 03 */}
@@ -81,22 +175,38 @@ const ContactUs: NextPage<Props> = ({}) => {
               </h3>
 
               <div className="grid grid-cols-1 gap-[30px]">
-                <TextareaField
-                  label="Project Description"
-                  placeholder="Your Message"
-                />
+                <div>
+                  <TextareaField
+                    label="Project Description"
+                    placeholder="Your Message"
+                    register={{ ...register("productDescription") }}
+                  />
+                  {errors.productDescription && (
+                    <span className="text-red-500 text-xs">
+                      {errors.productDescription.message}
+                    </span>
+                  )}
+                </div>
               </div>
 
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
-                <InputField
-                  type="number"
-                  label="Project Budget"
-                  placeholder="123"
-                />
+                <div>
+                  <InputField
+                    type="number"
+                    label="Project Budget"
+                    placeholder="123"
+                    register={{ ...register("productBudget") }}
+                  />
+                  {errors.productBudget && (
+                    <span className="text-red-500 text-xs">
+                      {errors.productBudget.message}
+                    </span>
+                  )}
+                </div>
               </div>
 
               <div className="mt-4">
-                <Button text="Submit Now" variant="black" fullWidth />
+                <Button submit text="Submit Now" variant="black" fullWidth />
               </div>
             </form>
 
