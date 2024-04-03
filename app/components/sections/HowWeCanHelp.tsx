@@ -15,14 +15,14 @@ const servicesData = [
     serial: "01",
     title: "Dedicated Team",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "Sim Soultion dedicated team is to ensure the smooth functioning of an organization's technology infrastructure, as well as to develop and implement IT strategies aligned with the business goals. They are responsible for maintaining hardware and software systems, troubleshooting technical issues, implementing new technologies, and providing support to end-users.",
   },
   {
     img: icon2,
     serial: "02",
     title: "QA and Testing",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "Sim Solution offers businesses a flexible, cost-effective, and scalable solution for accessing and using software applications, driving productivity, innovation, and competitiveness in today's digital economy such as CRM and Accounting solutions.",
   },
 
   {
@@ -30,7 +30,7 @@ const servicesData = [
     serial: "03",
     title: "SaaS",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "Sim Solution offers businesses a flexible, cost-effective, and scalable solution for accessing and using software applications, driving productivity, innovation, and competitiveness in today's digital economy such as CRM and Accounting solutions.",
   },
 ];
 
@@ -38,24 +38,24 @@ const solutionsData = [
   {
     img: icon4,
     serial: "04",
-    title: "Blockchain",
+    title: "Software Applications",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "Software applications provide specific functionality to meet business requirements, such as enterprise resource planning (ERP) systems, customer relationship management (CRM) software, human resource management systems (HRMS), accounting software, and collaboration tools.",
   },
   {
     img: icon5,
     serial: "05",
-    title: "Artificial Intelligence",
+    title: "Enterprise Mobility",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "Enterprise mobility solutions enable employees to access business applications and data from mobile devices, such as smartphones and tablets. This includes mobile device management (MDM), mobile application management (MAM), and enterprise mobility management (EMM) solutions.",
   },
 
   {
     img: icon6,
     serial: "06",
-    title: "Internet of Things",
+    title: "Digital Transformation:",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "Digital transformation solutions help organizations leverage technology to streamline processes, enhance customer experiences, and drive innovation. This includes technologies such as artificial intelligence (AI), machine learning (ML), internet of things (IoT), robotic process automation (RPA), and blockchain.",
   },
 ];
 
