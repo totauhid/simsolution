@@ -50,7 +50,7 @@ export default function SimpleSlider() {
 
       <div className="absolute z-20 flex items-center top-0 left-0 right-0 bottom-0">
         <Container>
-          <div className="text-white flex gap-0 md:gap-0 lg:gap-16">
+          <div className="text-white flex gap-0 md:gap-0 lg:gap-12">
             <div className="flex flex-col gap-8 md:gap-8 lg:gap-16">
               <p className="text-[18px] text-white">
                 The Next <span className="highlight">Gen</span>
@@ -74,7 +74,7 @@ export default function SimpleSlider() {
               </div>
             </div>
 
-            <div className="relative hidden goals-container">
+            <div className="relative hidden goals-container w-[500px]">
               {/* item 01 */}
               <div className="absolute top-0 left-0 flex items-center group transform translate-x-[90px] translate-y-[50px]">
                 <div className="peer flex items-center gap-4 cursor-pointer">
@@ -101,7 +101,7 @@ export default function SimpleSlider() {
               </div>
 
               {/* item 02 */}
-              <div className="absolute top-0 left-0 flex items-center group transform translate-x-[300px] translate-y-[180px]">
+              <div className="absolute top-0 right-0 flex items-center group transform translate-x-[0px] translate-y-[180px]">
                 <div className="peer flex items-center gap-4 cursor-pointer">
                   <div className="relative bg-[#ffffff1a] h-12 w-12 grid place-content-center rounded-full group-hover:bg-primary transition-colors shrink-0">
                     <IoMdAdd size={22} />
@@ -124,7 +124,7 @@ export default function SimpleSlider() {
               </div>
 
               {/* item 03 */}
-              <div className="absolute top-0 left-0 flex items-center group transform translate-x-[180px] translate-y-[300px]">
+              <div className="absolute top-0 right-0 flex items-center group transform -translate-x-[150px] translate-y-[300px]">
                 <div className="peer flex items-center gap-4 cursor-pointer">
                   <div className="relative bg-[#ffffff1a] h-12 w-12 grid place-content-center rounded-full group-hover:bg-primary transition-colors shrink-0">
                     <IoMdAdd size={22} />
