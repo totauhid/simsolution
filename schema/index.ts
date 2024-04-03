@@ -8,10 +8,8 @@ export const contactFormSchema = z.object({
   }),
   phone: z.string().min(1, { message: "Phone number is required" }),
   company: z.string().min(1, { message: "Company is required" }),
-  role: z.string().min(1, { message: "Role number is required" }),
-  projectDesign: z.string().min(1, { message: "Field is required" }),
-  productDescription: z
-    .string()
-    .min(1, { message: "Field number is required" }),
-  productBudget: z.string().min(1, { message: "Budget number is required" }),
+  role: z.string().min(1, { message: "Role is required" }),
+  projectDesign: z.string().min(1, { message: "Design is required" }),
+  productDescription: z.string().min(1, { message: "Description is required" }),
+  productBudget: z.string().min(1, { message: "Budget is required" }),
 });
