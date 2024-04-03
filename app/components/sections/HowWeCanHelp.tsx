@@ -47,7 +47,7 @@ const solutionsData = [
     serial: "05",
     title: "Enterprise Mobility",
     description:
-      "Enterprise mobility solutions enable employees to access business applications and data from mobile devices, such as smartphones and tablets. This includes mobile device management (MDM), mobile application management (MAM), and enterprise mobility management (EMM) solutions.",
+      "Enterprise mobility enable employees to access business applications and data from mobile devices, such as smartphones and tablets. This includes mobile device management (MDM), mobile application management (MAM), and enterprise mobility management (EMM) solutions.",
   },
 
   {
@@ -55,7 +55,7 @@ const solutionsData = [
     serial: "06",
     title: "Digital Transformation:",
     description:
-      "Digital transformation solutions help organizations leverage technology to streamline processes, enhance customer experiences, and drive innovation. This includes technologies such as artificial intelligence (AI), machine learning (ML), internet of things (IoT), robotic process automation (RPA), and blockchain.",
+      "Digital transformation help organizations leverage technology to streamline processes, enhance customer experiences, and drive innovation. This includes technologies such as artificial intelligence (AI), machine learning (ML), internet of things (IoT), robotic process automation (RPA), and blockchain.",
   },
 ];
 

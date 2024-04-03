@@ -62,13 +62,13 @@ export default function SimpleSlider() {
               </h1>
               <div>
                 <div className="flex flex-col-reverse items-start md:flex-row gap-12">
-                  <Link href={"/contact-us"}>
+                  <Link className="shrink-0" href={"/contact-us"}>
                     <Button text="Let's Talk" variant="primary" />
                   </Link>
-                  <p className="text-[#ffffff80] text-[15px] leading-normal">
-                    Lorem ipsum dolor sit amet, consectetur <br />
-                    adipiscing elit, sed do eiusmod tempor incididunt <br />
-                    ut labore et dolore magna aliqua.
+                  <p className="text-[#ffffff80] text-[15px] leading-normal max-w-[575px] w-full">
+                    SIM (System and Information Management) Solution Limited is
+                    an advanced ICT firm specialized in developing ICT
+                    Infrastructure for small to large-scale organizations.
                   </p>
                 </div>
               </div>

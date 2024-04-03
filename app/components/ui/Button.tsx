@@ -15,7 +15,7 @@ const Button: NextPage<Props> = ({ text, variant, fullWidth, submit }) => {
   return (
     <button
       type={submit ? "submit" : "button"}
-      className={`py-[18px] lg:py-[22.5px] px-[60px] rounded-full border-2 border-btn shrink-0 ${color} ${
+      className={`py-[18px] lg:py-[22.5px] px-[60px] rounded-full border-2 border-btn shrink-0  ${color} ${
         fullWidth && "w-full"
       }`}
     >
