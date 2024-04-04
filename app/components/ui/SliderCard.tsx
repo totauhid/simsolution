@@ -16,6 +16,10 @@ const SliderCard: NextPage<Props> = ({ img, title, description, madeBy }) => {
           src={img}
           alt={title}
           fill
+          sizes="100vw"
+          style={{
+            objectFit: "cover",
+          }}
           className="group-hover:scale-[1.01] transition-transform duration-500"
         />
       </div>
