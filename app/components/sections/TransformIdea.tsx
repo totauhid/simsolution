@@ -15,6 +15,7 @@ const TransformIdea = () => {
                 className="rounded-full grayscale"
                 src="/images/eye-gudget.png"
                 fill
+                sizes="100vw"
                 alt="eye"
               />
             </div>

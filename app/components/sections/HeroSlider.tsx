@@ -32,17 +32,17 @@ export default function SimpleSlider() {
     <section className="relative bg-[#3E434A]">
       <Slider {...settings}>
         {sliderItems.map((slider, _i) => (
-          <div
-            key={_i}
-            className="relative w-full h-[95vh] md:h-[90vh] lg:h-[100vh]"
-          >
+          <div key={_i} className="relative w-full h-[100vh]">
             <Image
               className="grayscale"
               src={slider.src}
               fill
               alt={slider.alt}
+              sizes="100vw"
+              style={{
+                objectFit: "cover",
+              }}
             />
-
             <div className="bg-[#121820cc] absolute top-0 left-0 right-0 bottom-0 z-10" />
           </div>
         ))}
