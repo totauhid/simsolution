@@ -1,14 +1,14 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
-import { navLinks } from "../lib";
 import { usePathname } from "next/navigation";
 import Container from "./ui/Container";
 import { useEffect, useState } from "react";
 import { useStickyStore } from "@/lib/store";
 import { FiMenu } from "react-icons/fi";
 import { MdOutlineClose } from "react-icons/md";
+import { navLinks } from "@/lib";
+import Link from "next/link";
 
 const Header = () => {
   const pathname = usePathname();
