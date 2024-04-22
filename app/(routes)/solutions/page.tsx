@@ -12,7 +12,7 @@ const Solutions: NextPage<Props> = ({}) => {
   return (
     <>
       <section>
-        <SubHero title="AI CONSULTING AND DEVELOPMENT" history="Solution" />
+        <SubHero title="CONSULTING AND DEVELOPMENT" history="Solution" />
       </section>
 
       <section className="py-[100px]">
@@ -20,7 +20,7 @@ const Solutions: NextPage<Props> = ({}) => {
           <SubtitleDot subtitle="Our Tools" />
 
           <h3 className="text-[30px] md:text-[35px] lg:text-[42px] mt-[30px] mb-[90px]">
-            AI Development <span className="highlight">Tech Stack</span>
+            Development <span className="highlight">Tech Stack</span>
           </h3>
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-[30px]">
