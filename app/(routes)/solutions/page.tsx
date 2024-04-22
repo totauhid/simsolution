@@ -24,18 +24,22 @@ const Solutions: NextPage<Props> = ({}) => {
           </h3>
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-[30px]">
+            <TechnologyCard title="ASP.NET" />
+            <TechnologyCard title="Java" />
             <TechnologyCard title="JavaScript" />
             <TechnologyCard title="Python" />
-            <TechnologyCard title="GCloud" />
-            <TechnologyCard title="Java" />
-            <TechnologyCard title="MySQL" />
-            <TechnologyCard title="ONNX" />
+            <TechnologyCard title="Node.js" />
+            <TechnologyCard title="Express.js" />
+            <TechnologyCard title="React.js" />
+            <TechnologyCard title="React Native" />
+            <TechnologyCard title="Next.js" />
             <TechnologyCard title="Kotlin" />
             <TechnologyCard title="Swift" />
             <TechnologyCard title="PHP" />
-            <TechnologyCard title="MariaDB" />
+            <TechnologyCard title="MySQL" />
+            <TechnologyCard title="MongoDB" />
+            <TechnologyCard title="Oracle" />
             <TechnologyCard title="AWS" />
-            <TechnologyCard title="React" />
           </div>
         </Container>
       </section>
