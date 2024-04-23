@@ -147,7 +147,7 @@
   }
 
   /* help section */
-  .help-circle::after {
+  /* .help-circle::after {
     content: "";
     display: inline-block;
     background-color: var(--primary-color);
@@ -158,10 +158,10 @@
     width: 20px;
     height: 20px;
     z-index: -1;
-  }
+  } */
 
   /* service section */
-  .sass-card::after {
+  /* .sass-card::after {
     content: "";
     display: inline-block;
     border-radius: 50%;
@@ -173,7 +173,7 @@
     top: 0;
     left: 0;
     transform: translate(39px, 37px);
-  }
+  } */
 }
 
 @layer base {
