@@ -24,7 +24,7 @@ const Solutions: NextPage<Props> = ({}) => {
           </h3>
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-[30px]">
-            <TechnologyCard title="ASP.NET" />
+            <TechnologyCard title=".NET" />
             <TechnologyCard title="Java" />
             <TechnologyCard title="JavaScript" />
             <TechnologyCard title="Python" />
@@ -33,9 +33,9 @@ const Solutions: NextPage<Props> = ({}) => {
             <TechnologyCard title="React.js" />
             <TechnologyCard title="React Native" />
             <TechnologyCard title="Next.js" />
-            <TechnologyCard title="Kotlin" />
-            <TechnologyCard title="Swift" />
             <TechnologyCard title="PHP" />
+            <TechnologyCard title="ASP.NET Web API" />
+            <TechnologyCard title="SQL Server" />
             <TechnologyCard title="MySQL" />
             <TechnologyCard title="MongoDB" />
             <TechnologyCard title="Oracle" />
