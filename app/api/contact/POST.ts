@@ -1,29 +1,27 @@
 import prisma from "@/lib/db";
-import { contactFormSchema } from "@/schema";
 import { NextResponse } from "next/server";
-
-interface ApiResponse {
-  message: string;
-}
+import { ApiResponse } from "./route";
 
 export async function POST(
   req: Request,
   res: Response
 ): Promise<NextResponse<ApiResponse>> {
   try {
-    const data = await req.json();
+    const data = (await req.json()) as contactFormSchema;
 
-    const validation = contactFormSchema.safeParse(data);
+    const {} = data;
 
-    if (!validation.success) {
-      return NextResponse.json(
-        { message: "Validation errors!!!" },
-        { status: 500 }
-      );
-    }
+    console.log(data);
 
+    // const validation = contactFormSchema.safeParse(data);
+    // if (!validation.success) {
+    //   return NextResponse.json(
+    //     { message: "Validation errors!!!" },
+    //     { status: 500 }
+    //   );
+    // }
     await prisma.contact.create({
-      data,
+      data: {},
     });
 
     return NextResponse.json(
