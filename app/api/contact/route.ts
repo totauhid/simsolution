@@ -2,8 +2,22 @@ import prisma from "@/lib/db";
 import { contactFormSchema } from "@/schema";
 import { NextResponse } from "next/server";
 
+interface ContactList {
+  id: string;
+  firstName: string;
+  lastName: string;
+  email: string;
+  phone: string;
+  company: string;
+  role: string;
+  projectDesign: string;
+  productDescription: string;
+  productBudget: string;
+}
+
 interface ApiResponse {
-  message: string;
+  message?: string;
+  contacts?: Array<ContactList>;
 }
 
 export async function POST(
@@ -34,6 +48,26 @@ export async function POST(
         status: 200,
       }
     );
+  } catch (error) {
+    return NextResponse.json(
+      {
+        message: "Something went wrong",
+      },
+      {
+        status: 500,
+      }
+    );
+  }
+}
+
+export async function GET(
+  req: Request,
+  res: Response
+): Promise<NextResponse<ApiResponse>> {
+  try {
+    const contacts = await prisma.contact.findMany();
+
+    return NextResponse.json({ contacts });
   } catch (error) {
     return NextResponse.json(
       {
