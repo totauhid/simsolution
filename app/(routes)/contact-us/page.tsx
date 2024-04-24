@@ -36,9 +36,9 @@ const ContactUs: NextPage<Props> = ({}) => {
   });
 
   const { mutate, isPending } = useMutation({
-    mutationKey: ["contact-us"],
+    mutationKey: ["message-us"],
     mutationFn: async (formData: ValidationSchema) => {
-      const { data } = await axios.post(`/api/contact`, formData, {
+      const { data } = await axios.post(`/api/message`, formData, {
         baseURL: process.env.NEXTAUTH_URL,
       });
       return data;
