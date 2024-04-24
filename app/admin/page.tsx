@@ -1,11 +1,24 @@
 "use client";
 
+import { useQuery } from "@tanstack/react-query";
+import axios from "axios";
 import { NextPage } from "next";
 import { signOut } from "next-auth/react";
+import TableRow from "../components/ui/TableRow";
 
 interface Props {}
 
 const Page: NextPage<Props> = ({}) => {
+  const { data: contacts, isLoading } = useQuery<ContactType[]>({
+    queryKey: ["contact"],
+    queryFn: async () => {
+      const { data } = await axios.get("/api/contact", {
+        baseURL: process.env.NEXTAUTH_URL,
+      });
+      return data.contacts;
+    },
+  });
+
   return (
     <div className="bg-gray-200 min-h-screen">
       <div className="container mx-auto p-5">
@@ -49,105 +62,17 @@ const Page: NextPage<Props> = ({}) => {
               </tr>
             </thead>
             <tbody>
-              <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-                <td className="px-6 py-4">Silver</td>
-                <td className="px-6 py-4">Laptop</td>
-                <td className="px-6 py-4">Yes</td>
-                <td className="px-6 py-4">Yes</td>
-                <td className="px-6 py-4">$2999</td>
-                <td className="px-6 py-4">3.0 lb.</td>
-                <td className="px-6 py-4">3.0 lb.</td>
-                <td className="px-6 py-4 flex items-center gap-4">
-                  <a
-                    href="#"
-                    className="font-medium text-blue-600 dark:text-blue-500 hover:underline"
-                  >
-                    Reply
-                  </a>
-
-                  <a
-                    href="#"
-                    className="font-medium text-blue-600 dark:text-blue-500 hover:underline"
-                  >
-                    Details
-                  </a>
-                </td>
-              </tr>
-
-              <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-                <td className="px-6 py-4">Silver</td>
-                <td className="px-6 py-4">Laptop</td>
-                <td className="px-6 py-4">Yes</td>
-                <td className="px-6 py-4">Yes</td>
-                <td className="px-6 py-4">$2999</td>
-                <td className="px-6 py-4">3.0 lb.</td>
-                <td className="px-6 py-4">3.0 lb.</td>
-                <td className="px-6 py-4 flex items-center gap-4">
-                  <a
-                    href="#"
-                    className="font-medium text-blue-600 dark:text-blue-500 hover:underline"
-                  >
-                    Reply
-                  </a>
-
-                  <a
-                    href="#"
-                    className="font-medium text-blue-600 dark:text-blue-500 hover:underline"
-                  >
-                    Details
-                  </a>
-                </td>
-              </tr>
-
-              <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-                <td className="px-6 py-4">Silver</td>
-                <td className="px-6 py-4">Laptop</td>
-                <td className="px-6 py-4">Yes</td>
-                <td className="px-6 py-4">Yes</td>
-                <td className="px-6 py-4">$2999</td>
-                <td className="px-6 py-4">3.0 lb.</td>
-                <td className="px-6 py-4">3.0 lb.</td>
-                <td className="px-6 py-4 flex items-center gap-4">
-                  <a
-                    href="#"
-                    className="font-medium text-blue-600 dark:text-blue-500 hover:underline"
-                  >
-                    Reply
-                  </a>
-
-                  <a
-                    href="#"
-                    className="font-medium text-blue-600 dark:text-blue-500 hover:underline"
-                  >
-                    Details
-                  </a>
-                </td>
-              </tr>
-
-              <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-                <td className="px-6 py-4">Silver</td>
-                <td className="px-6 py-4">Laptop</td>
-                <td className="px-6 py-4">Yes</td>
-                <td className="px-6 py-4">Yes</td>
-                <td className="px-6 py-4">$2999</td>
-                <td className="px-6 py-4">3.0 lb.</td>
-                <td className="px-6 py-4">3.0 lb.</td>
-                <td className="px-6 py-4 flex items-center gap-4">
-                  <a
-                    href="#"
-                    className="font-medium text-blue-600 dark:text-blue-500 hover:underline"
-                  >
-                    Reply
-                  </a>
-
-                  <a
-                    href="#"
-                    className="font-medium text-blue-600 dark:text-blue-500 hover:underline"
-                  >
-                    Details
-                  </a>
-                </td>
-              </tr>
+              {isLoading ? (
+                <tr className="text-center bg-white">
+                  <td className="p-4" colSpan={8}>
+                    Loading...
+                  </td>
+                </tr>
+              ) : (
+                contacts?.map((contact) => (
+                  <TableRow key={contact.id} data={contact} />
+                ))
+              )}
             </tbody>
           </table>
         </div>
