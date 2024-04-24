@@ -14,6 +14,16 @@ export const contactFormSchema = z.object({
   productBudget: z.string().min(1, { message: "Budget is required" }),
 });
 
+export const signInSchema = z.object({
+  email: z
+    .string()
+    .trim()
+    .min(1, { message: "Email is required" })
+    .email("Invalid email address"),
 
-
-
+  password: z
+    .string()
+    .trim()
+    .min(6, { message: "Password at list 6 char." })
+    .max(30, { message: "Password at most 6 char." }),
+});
