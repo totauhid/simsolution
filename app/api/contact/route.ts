@@ -2,22 +2,9 @@ import prisma from "@/lib/db";
 import { contactFormSchema } from "@/schema";
 import { NextResponse } from "next/server";
 
-interface ContactList {
-  id: string;
-  firstName: string;
-  lastName: string;
-  email: string;
-  phone: string;
-  company: string;
-  role: string;
-  projectDesign: string;
-  productDescription: string;
-  productBudget: string;
-}
-
 interface ApiResponse {
   message?: string;
-  contacts?: Array<ContactList>;
+  contacts?: Array<ContactType>;
 }
 
 export async function POST(
