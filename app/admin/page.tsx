@@ -9,13 +9,13 @@ import TableRow from "../components/ui/TableRow";
 interface Props {}
 
 const Page: NextPage<Props> = ({}) => {
-  const { data: contacts, isLoading } = useQuery<ContactType[]>({
-    queryKey: ["contact"],
+  const { data: messages, isLoading } = useQuery<ContactType[]>({
+    queryKey: ["message-all"],
     queryFn: async () => {
-      const { data } = await axios.get("/api/contact", {
+      const { data } = await axios.get("/api/message", {
         baseURL: process.env.NEXTAUTH_URL,
       });
-      return data.contacts;
+      return data.messages;
     },
   });
 
@@ -69,8 +69,8 @@ const Page: NextPage<Props> = ({}) => {
                   </td>
                 </tr>
               ) : (
-                contacts?.map((contact) => (
-                  <TableRow key={contact.id} data={contact} />
+                messages?.map((message) => (
+                  <TableRow key={message.id} message={message} />
                 ))
               )}
             </tbody>
