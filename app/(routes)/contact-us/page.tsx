@@ -55,7 +55,6 @@ const ContactUs: NextPage<Props> = ({}) => {
   });
 
   const onSubmit = (data: ValidationSchema) => {
-    console.log(data);
     mutate(data);
   };
 
