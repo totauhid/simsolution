@@ -4,7 +4,7 @@ interface Props {}
 
 const Page: NextPage<Props> = ({}) => {
   return (
-    <div className="h-screen bg-gray-300 flex items-center justify-center p-10">
+    <div className="h-screen bg-gray-200 flex items-center justify-center p-10">
       <form className="max-w-[500px] w-full mx-auto bg-white p-8 rounded-lg">
         <h2 className="text-3xl mb-4">Sign In</h2>
         <div className="mb-5">
