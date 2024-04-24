@@ -1,15 +1,20 @@
 "use client";
 
+import { useState } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { z } from "zod";
 
 import { signInSchema } from "@/schema";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { useMutation } from "@tanstack/react-query";
-import axios from "axios";
 import { signIn } from "next-auth/react";
+import toast from "react-hot-toast";
+import { useRouter } from "next/navigation";
+import { FiLoader } from "react-icons/fi";
 
 const Page = () => {
+  const [isLoading, setIsLoading] = useState(false);
+  const router = useRouter();
+
   //extract the inferred type from schema
   type ValidationSchemaType = z.infer<typeof signInSchema>;
 
@@ -23,13 +28,24 @@ const Page = () => {
   });
 
   // Form submit handler
-  const onSubmit: SubmitHandler<ValidationSchemaType> = (mailData) => {
+  const onSubmit: SubmitHandler<ValidationSchemaType> = async (mailData) => {
     const { email, password } = mailData;
 
-    signIn("credentials", {
+    setIsLoading(true);
+    await signIn("credentials", {
       email,
       password,
-      callbackUrl: "/admin",
+      redirect: false,
+    }).then(({ ok, error }: any) => {
+      if (ok) {
+        toast.success("Login successful");
+        router.push("/admin");
+        router.refresh();
+        setIsLoading(false);
+      } else {
+        toast.error("Invalid Credentials!");
+        setIsLoading(false);
+      }
     });
 
     reset();
@@ -88,7 +104,14 @@ const Page = () => {
           type="submit"
           className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
         >
-          Submit
+          {isLoading ? (
+            <span className="flex items-center gap-1 text-white">
+              <FiLoader size={18} className="animate-spin" />
+              Submitting ...
+            </span>
+          ) : (
+            "Submit"
+          )}
         </button>
       </form>
     </div>

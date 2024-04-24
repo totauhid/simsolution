@@ -1,4 +1,7 @@
+"use client";
+
 import { NextPage } from "next";
+import { signOut } from "next-auth/react";
 
 interface Props {}
 
@@ -6,8 +9,16 @@ const Page: NextPage<Props> = ({}) => {
   return (
     <div className="bg-gray-200 min-h-screen">
       <div className="container mx-auto p-5">
-        <h2 className="mb-5 text-4xl text-center">Message Lists</h2>
-        <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
+        <div className="flex items-center justify-between bg-white rounded-lg mb-5 p-4">
+          <h2 className="text-3xl text-center">Message Lists</h2>
+          <button
+            onClick={() => signOut()}
+            className="bg-rose-500 hover:bg-rose-600 transition-colors px-3 py-1 rounded-full text-white"
+          >
+            logout
+          </button>
+        </div>
+        <div className="relative overflow-x-auto shadow-md rounded-lg">
           <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
             <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
               <tr>
