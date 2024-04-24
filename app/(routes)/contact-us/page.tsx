@@ -17,12 +17,14 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { contactFormSchema } from "@/schema";
-import { useQuery } from "@tanstack/react-query";
+import { useMutation, useQuery } from "@tanstack/react-query";
+import axios from "axios";
 
 interface Props {}
 
 const ContactUs: NextPage<Props> = ({}) => {
   type ValidationSchema = z.infer<typeof contactFormSchema>;
+  axios.defaults.baseURL = process.env.NEXTAUTH_URL;
 
   const {
     register,
@@ -36,12 +38,13 @@ const ContactUs: NextPage<Props> = ({}) => {
   const onSubmit = (data: ValidationSchema) => {
     console.log(data);
 
-    const {} = useQuery({
-      queryKey: ["contact-us"],
-      queryFn: async () => { 
+    const { mutate } = useMutation({
+      mutationKey: ["contact-us"],
+      mutationFn: async (formData: ValidationSchema) => {
+        const { data } = await axios.post(`/api/contact`);
 
-
-      }
+        return data;
+      },
     });
 
     console.log("ok");
