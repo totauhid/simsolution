@@ -17,14 +17,14 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { contactFormSchema } from "@/schema";
-import { useMutation, useQuery } from "@tanstack/react-query";
+import { useMutation } from "@tanstack/react-query";
 import axios from "axios";
+import toast from "react-hot-toast";
 
 interface Props {}
 
 const ContactUs: NextPage<Props> = ({}) => {
   type ValidationSchema = z.infer<typeof contactFormSchema>;
-  axios.defaults.baseURL = process.env.NEXTAUTH_URL;
 
   const {
     register,
@@ -35,21 +35,28 @@ const ContactUs: NextPage<Props> = ({}) => {
     resolver: zodResolver(contactFormSchema),
   });
 
+  const { mutate, isPending } = useMutation({
+    mutationKey: ["contact-us"],
+    mutationFn: async (formData: ValidationSchema) => {
+      const { data } = await axios.post(`/api/contact`, formData, {
+        baseURL: process.env.NEXTAUTH_URL,
+      });
+      return data;
+    },
+
+    onSuccess: () => {
+      toast.success("Thank you for contacting us!");
+      reset();
+    },
+
+    onError: () => {
+      toast.error("Something went wrong!");
+    },
+  });
+
   const onSubmit = (data: ValidationSchema) => {
     console.log(data);
-
-    const { mutate } = useMutation({
-      mutationKey: ["contact-us"],
-      mutationFn: async (formData: ValidationSchema) => {
-        const { data } = await axios.post(`/api/contact`);
-
-        return data;
-      },
-    });
-
-    console.log("ok");
-
-    reset();
+    mutate(data);
   };
 
   return (
@@ -218,7 +225,13 @@ const ContactUs: NextPage<Props> = ({}) => {
               </div>
 
               <div className="mt-4">
-                <Button submit text="Submit Now" variant="black" fullWidth />
+                <Button
+                  isPending={isPending}
+                  submit
+                  text="Submit Now"
+                  variant="black"
+                  fullWidth
+                />
               </div>
             </form>
 
