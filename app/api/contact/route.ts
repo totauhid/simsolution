@@ -65,9 +65,13 @@ export async function GET(
   res: Response
 ): Promise<NextResponse<ApiResponse>> {
   try {
-    const contacts = await prisma.contact.findMany();
+    const contacts = await prisma.contact.findMany({
+      orderBy: {
+        createdAt: "desc",
+      },
+    });
 
-    return NextResponse.json({ contacts });
+    return NextResponse.json({ contacts }, { status: 200 });
   } catch (error) {
     return NextResponse.json(
       {
