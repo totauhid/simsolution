@@ -17,6 +17,7 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { contactFormSchema } from "@/schema";
+import { useQuery } from "@tanstack/react-query";
 
 interface Props {}
 
@@ -34,6 +35,14 @@ const ContactUs: NextPage<Props> = ({}) => {
 
   const onSubmit = (data: ValidationSchema) => {
     console.log(data);
+
+    const {} = useQuery({
+      queryKey: ["contact-us"],
+      queryFn: async () => { 
+
+
+      }
+    });
 
     console.log("ok");
 
