@@ -9,7 +9,8 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { signIn } from "next-auth/react";
 import toast from "react-hot-toast";
 import { useRouter } from "next/navigation";
-import { FiLoader } from "react-icons/fi";
+import { FiArrowLeft, FiLoader } from "react-icons/fi";
+import Link from "next/link";
 
 const Page = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -113,6 +114,13 @@ const Page = () => {
             "Submit"
           )}
         </button>
+
+        <Link
+          className="flex items-center gap-1 mt-3 text-gray-500 hover:text-blue-800"
+          href={"/"}
+        >
+          <FiArrowLeft /> Go to site
+        </Link>
       </form>
     </div>
   );

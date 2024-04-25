@@ -112,7 +112,7 @@ const TableRow: NextPage<Props> = ({ message }) => {
 
             <div className="p-4 md:p-5 space-y-4">
               {isLoading ? (
-                <div className="min-h-48">
+                <div className="min-h-24">
                   <p className="text-xl text-center">Loading...</p>
                 </div>
               ) : (

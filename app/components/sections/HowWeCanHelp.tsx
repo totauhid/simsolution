@@ -22,7 +22,8 @@ const servicesData = [
     serial: "02",
     title: "QA and Testing",
     description:
-      "Sim Solution offers businesses a flexible, cost-effective, and scalable solution for accessing and using software applications, driving productivity, innovation, and competitiveness in today's digital economy such as CRM and Accounting solutions.",
+      "Sim Solution's versatile, cost-effective, and scalable approach not only enhances productivity and innovation but also provides robust support for QA and testing initiatives. With its seamless integration capabilities and focus on data security, Sim Solution empowers QA teams to conduct thorough testing across various environments.",
+    //  ensuring peak performance and compliance amidst dynamic market shifts.
   },
 
   {
@@ -40,7 +41,7 @@ const solutionsData = [
     serial: "04",
     title: "Software Applications",
     description:
-      "Software applications provide specific functionality to meet business requirements, such as enterprise resource planning (ERP) systems, customer relationship management (CRM) software, human resource management systems (HRMS), accounting software, and collaboration tools.",
+      "Software applications provide specific functionality to meet business requirements, such as enterprise resource planning (ERP) systems, customer relationship management (CRM) software, human resource management systems (HRMS), accounting software, and collaboration tools. From finance to communication, software applications drive efficiency and enable businesses to thrive in a dynamic marketplace.",
   },
   {
     img: icon5,
@@ -53,7 +54,7 @@ const solutionsData = [
   {
     img: icon6,
     serial: "06",
-    title: "Digital Transformation:",
+    title: "Digital Transformation",
     description:
       "Digital transformation help organizations leverage technology to streamline processes, enhance customer experiences, and drive innovation. This includes technologies such as artificial intelligence (AI), machine learning (ML), internet of things (IoT), robotic process automation (RPA), and blockchain.",
   },
@@ -68,7 +69,7 @@ const HowWeCanHelp = () => {
         </h2>
 
         <div className="flex-row lg:flex justify-between gap-8">
-          <div>
+          <div className="flex-1">
             <h4 className="text-[22px] text-[#121820] mt-[30px] mb-[30px] lg:mb-[60px]">
               IT Services
             </h4>
@@ -83,7 +84,7 @@ const HowWeCanHelp = () => {
             ))}
           </div>
 
-          <div>
+          <div className="flex-1">
             <h4 className="text-[22px] text-[#121820] mt-[30px] mb-[30px] lg:mb-[60px]">
               IT Solutions
             </h4>
