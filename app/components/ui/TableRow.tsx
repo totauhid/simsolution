@@ -1,11 +1,12 @@
 "use client";
 
 import { useIdStore, useModalStore } from "@/lib/store";
-import { useQuery } from "@tanstack/react-query";
+import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import axios from "axios";
 import { NextPage } from "next";
 import Link from "next/link";
 import { useState } from "react";
+import toast from "react-hot-toast";
 
 interface Props {
   message: ContactType;
@@ -15,14 +16,36 @@ const TableRow: NextPage<Props> = ({ message }) => {
   const { modal, setModal } = useModalStore();
   const { id, setId } = useIdStore();
 
+  const queryClient = useQueryClient();
+
   const handleModal = (id: string) => {
     setId(id);
   };
 
-  console.log(id);
+  const handleDelete = (id: string) => {
+    if (window.confirm("You want to delete this contact?")) {
+      mutate(id);
+    }
+  };
+
+  const { mutate } = useMutation({
+    mutationKey: ["messgae_delete", id],
+    mutationFn: async (id: string) => {
+      const { data } = await axios.delete(`/api/message/${id}`);
+      return data;
+    },
+
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ["message_fetcher"] });
+      toast.success("Contact deleted!");
+    },
+    onError: () => {
+      toast.error("Something went wrong!");
+    },
+  });
 
   const { data, isLoading } = useQuery<ContactType>({
-    queryKey: ["contact-id", id],
+    queryKey: ["message_details", id],
     queryFn: async () => {
       const { data } = await axios.get(`/api/message/${id}`);
 
@@ -61,6 +84,13 @@ const TableRow: NextPage<Props> = ({ message }) => {
           >
             Details
           </span>
+
+          <span
+            onClick={() => handleDelete(message.id)}
+            className="font-medium text-rose-600 dark:text-rose-500 hover:underline cursor-pointer"
+          >
+            Delete
+          </span>
         </td>
       </tr>
 
@@ -71,7 +101,7 @@ const TableRow: NextPage<Props> = ({ message }) => {
         id="default-modal"
         className={`${
           modal ? "flex" : "hidden"
-        } overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-start w-full md:inset-0 h-screen max-h-full bg-slate-500/10`}
+        } overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-start w-full md:inset-0 h-screen max-h-full bg-slate-500/70 backdrop-blur-sm`}
       >
         <div className="relative pt-12 w-full max-w-2xl max-h-full">
           <div

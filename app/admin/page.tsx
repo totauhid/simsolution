@@ -1,5 +1,5 @@
 "use client";
-
+import { BsMailboxFlag } from "react-icons/bs";
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 import { NextPage } from "next";
@@ -10,7 +10,7 @@ interface Props {}
 
 const Page: NextPage<Props> = ({}) => {
   const { data: messages, isLoading } = useQuery<ContactType[]>({
-    queryKey: ["message-all"],
+    queryKey: ["message_fetcher"],
     queryFn: async () => {
       const { data } = await axios.get("/api/message", {
         baseURL: process.env.NEXTAUTH_URL,
@@ -66,6 +66,13 @@ const Page: NextPage<Props> = ({}) => {
                 <tr className="text-center bg-white">
                   <td className="p-4" colSpan={8}>
                     Loading...
+                  </td>
+                </tr>
+              ) : messages?.length == 0 ? (
+                <tr className="text-center bg-white">
+                  <td align="center" className="p-4" colSpan={8}>
+                    <BsMailboxFlag size={70} />
+                    <p>Empty Table!</p>
                   </td>
                 </tr>
               ) : (
