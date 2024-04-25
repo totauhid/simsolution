@@ -18,7 +18,7 @@ const SassCard: NextPage<Props> = ({ title, description, serial, shape }) => {
         {serial}
       </div>
       <h4 className="text-[22px] mb-[15px]">{title}</h4>
-      <p className="text-[#12182066]">{description}</p>
+      <p className="text-[#12182086]">{description}</p>
     </div>
   );
 };
