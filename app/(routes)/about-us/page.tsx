@@ -21,10 +21,10 @@ const AboutUs: NextPage<Props> = ({}) => {
         <Container>
           <div className="flex flex-col md:flex-row gap-12 justify-between items-center">
             <p className="text-[20px] md:text-[22px]">
-              Lorem ipsum dolor sit amet,{" "}
-              <span className="highlight">consectetur adipiscing elit</span>,
+              We are committed to provide quality{" "}
+              <span className="highlight"> solutions and services</span>,
               <br />
-              sed do eiusmod tempor incididunt ut labor aliqua.
+              on time that addresses every need of our customers.
             </p>
 
             <Button text="Talk To an Expert" variant="black" />

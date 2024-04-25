@@ -22,8 +22,6 @@ const TransformIdea = () => {
           </div>
 
           <div>
-            <SubtitleDot subtitle="Firm Overview" />
-
             <h3 className="text-[30px] md:text-[35px] lg:text-[42px]">
               We Specialize in <br />
               <span className="highlight">Transforming Your Idea</span> or{" "}
@@ -31,11 +29,10 @@ const TransformIdea = () => {
               Business in The Current <br /> Digital Era.
             </h3>
 
-            <p className="text-[15px] text-[#12182066] my-[30px] lg:my-[50px]">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis
-              ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas
-              accumsan lacus vel facilisis.
+            <p className="text-[15px] text-[#12182086] my-[30px] lg:my-[50px]">
+              In the current digital era, there are various types of
+              transformations that businesses and ideas can undergo to stay
+              relevant and thrive.
             </p>
 
             <div className="flex flex-col gap-[15px]">
@@ -46,7 +43,7 @@ const TransformIdea = () => {
                   width={22}
                   alt="check"
                 />
-                <p>Quis suspendisse ultrices gravida.</p>
+                <p>Digital Transformation</p>
               </div>
 
               <div className="flex items-center gap-[15px]">
@@ -56,7 +53,7 @@ const TransformIdea = () => {
                   width={22}
                   alt="check"
                 />
-                <p>Consectetur adipiscing elit.</p>
+                <p>E-commerce Transformation.</p>
               </div>
 
               <div className="flex items-center gap-[15px]">
@@ -66,7 +63,7 @@ const TransformIdea = () => {
                   width={22}
                   alt="check"
                 />
-                <p>Quis suspendisse ultrices gravida.</p>
+                <p>Mobile Transformation.</p>
               </div>
 
               <div className="flex items-center gap-[15px]">
@@ -76,7 +73,17 @@ const TransformIdea = () => {
                   width={22}
                   alt="check"
                 />
-                <p>Consectetur adipiscing elit.</p>
+                <p>Data Transformation.</p>
+              </div>
+
+              <div className="flex items-center gap-[15px]">
+                <Image
+                  src="/images/checkbox.svg"
+                  height={22}
+                  width={22}
+                  alt="check"
+                />
+                <p>Innovation Transformation.</p>
               </div>
             </div>
           </div>
