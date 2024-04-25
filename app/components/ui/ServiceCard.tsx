@@ -23,7 +23,7 @@ const ServiceCard: NextPage<Props> = ({ img, serial, title, description }) => {
             <span className="highlight">{serial}</span>
             <h5>{title}</h5>
           </div>
-          <p className="text-[#12182066]">{description}</p>
+          <p className="text-[#12182086]">{description}</p>
         </div>
       </div>
     </div>

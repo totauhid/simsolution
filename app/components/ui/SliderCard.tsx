@@ -31,7 +31,7 @@ const SliderCard: NextPage<Props> = ({ img, title, description, madeBy }) => {
             by: <span className="highlight">{madeBy}</span>
           </p>
         </div>
-        <p className="flex-1 text-[#12182066]">{description}</p>
+        <p className="flex-1 text-[#12182086]">{description}</p>
       </div>
     </div>
   );
