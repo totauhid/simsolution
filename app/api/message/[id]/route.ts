@@ -11,13 +11,43 @@ export async function GET(
   { params }: { params: { id: string } }
 ): Promise<NextResponse<ApiResponse>> {
   try {
+    const { id } = params;
+
     const messages = await prisma.contact.findUnique({
       where: {
-        id: params.id,
+        id,
       },
     });
 
     return NextResponse.json({ messages }, { status: 200 });
+  } catch (error) {
+    return NextResponse.json(
+      {
+        message: "Something went wrong",
+      },
+      {
+        status: 500,
+      }
+    );
+  }
+}
+
+export async function DELETE(
+  req: Request,
+  { params }: { params: { id: string } }
+): Promise<NextResponse<ApiResponse>> {
+  try {
+    const { id } = params;
+
+    await prisma.contact.delete({
+      where: {
+        id,
+      },
+    });
+
+    return NextResponse.json({
+      message: "Message deleted!",
+    });
   } catch (error) {
     return NextResponse.json(
       {

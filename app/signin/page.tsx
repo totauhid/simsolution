@@ -108,10 +108,10 @@ const Page = () => {
           {isLoading ? (
             <span className="flex items-center gap-1 text-white">
               <FiLoader size={18} className="animate-spin" />
-              Submitting ...
+              Signing in...
             </span>
           ) : (
-            "Submit"
+            "Sign In"
           )}
         </button>
 
