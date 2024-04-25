@@ -26,8 +26,18 @@ const Button: NextPage<Props> = ({
         fullWidth && "w-full"
       }`}
     >
-      {isPending && <FiLoader size={20} className="animate-spin" />}
-      {!isPending ? text : "Submitting form..."}
+      {submit ? (
+        isPending ? (
+          <span className="flex items-center gap-1">
+            <FiLoader size={20} className="animate-spin" />
+            Submitting form...
+          </span>
+        ) : (
+          text
+        )
+      ) : (
+        text
+      )}
     </button>
   );
 };
