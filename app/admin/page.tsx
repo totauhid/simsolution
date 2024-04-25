@@ -2,7 +2,7 @@
 import { BsMailboxFlag } from "react-icons/bs";
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
-import { NextPage } from "next";
+import { NextPage } from "next";import {} from 'zustand';
 import { signOut } from "next-auth/react";
 import TableRow from "../components/ui/TableRow";
 

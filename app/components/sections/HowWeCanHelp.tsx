@@ -70,7 +70,7 @@ const HowWeCanHelp = () => {
 
         <div className="flex-row lg:flex justify-between gap-8">
           <div className="flex-1">
-            <h4 className="text-[22px] text-[#121820] mt-[30px] mb-[30px] lg:mb-[60px]">
+            <h4 className="text-[22px] text-[#12182086] mt-[30px] mb-[30px] lg:mb-[60px]">
               IT Services
             </h4>
             {servicesData.map(({ img, serial, title, description }, _i) => (
@@ -85,7 +85,7 @@ const HowWeCanHelp = () => {
           </div>
 
           <div className="flex-1">
-            <h4 className="text-[22px] text-[#121820] mt-[30px] mb-[30px] lg:mb-[60px]">
+            <h4 className="text-[22px] text-[#12182086] mt-[30px] mb-[30px] lg:mb-[60px]">
               IT Solutions
             </h4>
             {solutionsData.map(({ img, serial, title, description }, _i) => (

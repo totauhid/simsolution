@@ -16,7 +16,7 @@ const WhyWorkWithCard: NextPage<Props> = ({ title, description, img }) => {
         </div>
         <h4 className="max-w-[300px] w-full text-[22px]">{title}</h4>
       </div>
-      <p className="max-w-[655px] w-full text-[#12182066]">{description}</p>
+      <p className="max-w-[655px] w-full text-[#12182086]">{description}</p>
     </div>
   );
 };
