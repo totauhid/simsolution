@@ -73,7 +73,6 @@ const ContactUs: NextPage<Props> = ({}) => {
               <h3 className="text-[22px] mb-[30px] lg:mb-[60px]">
                 <span className="highlight">01.</span> Tell Us About Yourself
               </h3>
-
               <div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-[30px]">
                 <div>
                   <InputField
