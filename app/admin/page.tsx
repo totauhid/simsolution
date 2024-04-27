@@ -2,7 +2,8 @@
 import { BsMailboxFlag } from "react-icons/bs";
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
-import { NextPage } from "next";import {} from 'zustand';
+import { NextPage } from "next";
+import {} from "zustand";
 import { signOut } from "next-auth/react";
 import TableRow from "../components/ui/TableRow";
 
@@ -23,7 +24,7 @@ const Page: NextPage<Props> = ({}) => {
     <div className="bg-gray-200 min-h-screen">
       <div className="container mx-auto p-5">
         <div className="flex items-center justify-between bg-white rounded-lg mb-5 p-4">
-          <h2 className="text-3xl text-center">Message Lists</h2>
+          <h2 className="text-3xl text-center">All Messages</h2>
           <button
             onClick={() => signOut()}
             className="bg-rose-500 hover:bg-rose-600 transition-colors px-3 py-1 rounded-full text-white"
