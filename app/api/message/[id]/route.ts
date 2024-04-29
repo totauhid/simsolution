@@ -19,7 +19,7 @@ export async function GET(
       },
     });
 
-    return NextResponse.json({ messages }, { status: 200 });
+    return NextResponse.json({ messages }, { status: 204 });
   } catch (error) {
     return NextResponse.json(
       {
@@ -45,9 +45,14 @@ export async function DELETE(
       },
     });
 
-    return NextResponse.json({
-      message: "Message deleted!",
-    });
+    return NextResponse.json(
+      {
+        message: "Message deleted!",
+      },
+      {
+        status: 204,
+      }
+    );
   } catch (error) {
     return NextResponse.json(
       {

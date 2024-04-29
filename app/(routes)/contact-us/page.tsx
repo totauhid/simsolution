@@ -61,7 +61,7 @@ const ContactUs: NextPage<Props> = ({}) => {
   return (
     <>
       <section>
-        <SubHero title="LET’S DISCUSS YOUR OPPORTUNITY" history="Contact Us" />
+        <SubHero title="LET'S DISCUSS YOUR OPPORTUNITY" history="Contact Us" />
       </section>
 
       <section className="py-[100px]">
