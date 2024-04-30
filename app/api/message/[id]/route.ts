@@ -50,7 +50,7 @@ export async function DELETE(
         message: "Message deleted!",
       },
       {
-        status: 204,
+        status: 200,
       }
     );
   } catch (error) {
