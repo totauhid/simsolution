@@ -45,9 +45,14 @@ export async function DELETE(
       },
     });
 
-    return NextResponse.json({
-      message: "Message deleted!",
-    });
+    return NextResponse.json(
+      {
+        message: "Message deleted!",
+      },
+      {
+        status: 200,
+      }
+    );
   } catch (error) {
     return NextResponse.json(
       {
