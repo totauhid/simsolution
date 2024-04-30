@@ -32,7 +32,7 @@ export async function POST(
         message: "Message sent successfully",
       },
       {
-        status: 200,
+        status: 201,
       }
     );
   } catch (error) {
@@ -70,4 +70,3 @@ export async function GET(
     );
   }
 }
-
